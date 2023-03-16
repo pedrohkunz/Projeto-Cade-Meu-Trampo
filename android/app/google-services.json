@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1052326365292",
+    "project_id": "cademeutrampo",
+    "storage_bucket": "cademeutrampo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052326365292:android:cc648bc4d04aca3c00b049",
+        "android_client_info": {
+          "package_name": "com.example.projetocademeutrampo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052326365292-6jqncb8e7jg27q55legha54q6btjvfls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOThiX1GkSR_ZJvRntNjFnLqxZalIumeo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052326365292-6jqncb8e7jg27q55legha54q6btjvfls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
