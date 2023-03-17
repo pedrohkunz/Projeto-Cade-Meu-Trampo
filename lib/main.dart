@@ -6,6 +6,7 @@ import 'package:projetocademeutrampo/home.dart';
 import 'package:projetocademeutrampo/perfil.dart';
 import 'package:projetocademeutrampo/perfil.dart';
 import 'login.dart';
+import 'dart:js';
 
 void main() async{ 
   

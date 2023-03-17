@@ -110,7 +110,7 @@ class _MyHomeState extends State<MyHome> {
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                              child: Image(image: AssetImage("carinhadoti.jpg"),
+                              child: Image(image: AssetImage("design.jpg"),
                               fit: BoxFit.cover,
                               alignment: Alignment.topCenter,
                               height: 120,
@@ -121,7 +121,7 @@ class _MyHomeState extends State<MyHome> {
                               padding: const EdgeInsets.only(top: 8.0, left: 20.0),
                               child: Container(
                                 alignment: Alignment.centerLeft,
-                                child: Text("Informática", style: TextStyle(
+                                child: Text("Design", style: TextStyle(
                                   color: Colors.white, fontSize: 18
                                 ),),
                               ),
@@ -142,7 +142,7 @@ class _MyHomeState extends State<MyHome> {
                               padding: const EdgeInsets.only(left: 20.0),
                               child: Container(
                                 alignment: Alignment.centerLeft,
-                                child: Text("Profissionais de T.I", style: TextStyle(
+                                child: Text("Profissionais em Design Gráfico", style: TextStyle(
                                   color: Color.fromARGB(255, 194, 194, 194),
                                   fontSize: 15
                                 ),),
@@ -167,7 +167,7 @@ class _MyHomeState extends State<MyHome> {
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                              child: Image(image: AssetImage("carinhadoti.jpg"),
+                              child: Image(image: AssetImage("obras.jpg"),
                               fit: BoxFit.cover,
                               alignment: Alignment.topCenter,
                               height: 120,
@@ -178,7 +178,7 @@ class _MyHomeState extends State<MyHome> {
                               padding: const EdgeInsets.only(top: 8.0, left: 20.0),
                               child: Container(
                                 alignment: Alignment.centerLeft,
-                                child: Text("Informática", style: TextStyle(
+                                child: Text("Obras & Reformas", style: TextStyle(
                                   color: Colors.white, fontSize: 18
                                 ),),
                               ),
@@ -199,7 +199,7 @@ class _MyHomeState extends State<MyHome> {
                               padding: const EdgeInsets.only(left: 20.0),
                               child: Container(
                                 alignment: Alignment.centerLeft,
-                                child: Text("Profissionais de T.I", style: TextStyle(
+                                child: Text("Profissionais em Obras e Reformas", style: TextStyle(
                                   color: Color.fromARGB(255, 194, 194, 194),
                                   fontSize: 15
                                 ),),
@@ -224,7 +224,7 @@ class _MyHomeState extends State<MyHome> {
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                              child: Image(image: AssetImage("carinhadoti.jpg"),
+                              child: Image(image: AssetImage("professor.png"),
                               fit: BoxFit.cover,
                               alignment: Alignment.topCenter,
                               height: 120,
@@ -235,7 +235,7 @@ class _MyHomeState extends State<MyHome> {
                               padding: const EdgeInsets.only(top: 8.0, left: 20.0),
                               child: Container(
                                 alignment: Alignment.centerLeft,
-                                child: Text("Informática", style: TextStyle(
+                                child: Text("Educação & Ensino", style: TextStyle(
                                   color: Colors.white, fontSize: 18
                                 ),),
                               ),
@@ -256,7 +256,7 @@ class _MyHomeState extends State<MyHome> {
                               padding: const EdgeInsets.only(left: 20.0),
                               child: Container(
                                 alignment: Alignment.centerLeft,
-                                child: Text("Profissionais de T.I", style: TextStyle(
+                                child: Text("Profissionais da educação", style: TextStyle(
                                   color: Color.fromARGB(255, 194, 194, 194),
                                   fontSize: 15
                                 ),),
@@ -266,11 +266,241 @@ class _MyHomeState extends State<MyHome> {
                           ],
                         )
                       ),
-
-
                     ],
                   ),
-                )
+                ),
+
+
+                Padding(
+                  padding: const EdgeInsets.only(left:45.0, right: 55.0, top: 40, bottom: 25),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      child: Text("Profissionais Bem Avaliados",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20),),
+                    ),
+                  ),
+                ),
+
+                Container(
+                  padding: EdgeInsets.only(left: 27, top: 10, right: 37.0),
+                  height: 200,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      Container(
+                        height: 200,
+                        child: Column(
+                          children: [
+                             Padding(
+                               padding: const EdgeInsets.only(left:18.0),
+                               child: CircleAvatar(
+                                backgroundImage: AssetImage("jackie.png"),
+                                radius: 30,
+                                                         ),
+                             ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                              child: Container(
+                                child: Text("Jackie", style: TextStyle(
+                                  color: Colors.white, fontSize: 18
+                                ),),
+                              ),
+                            ),
+
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20.0),
+                              child: Container(
+                                child: Text("Ator", style: TextStyle(
+                                  color: Color.fromARGB(255, 194, 194, 194),
+                                  fontSize: 15
+                                ),),
+                              ),
+                            )
+                            
+                          ],
+                        )
+                      ),
+                      
+                      SizedBox(width: 30,),
+
+                      Container(
+                        height: 200,
+                        child: Column(
+                          children: [
+                             Padding(
+                               padding: const EdgeInsets.only(left:18.0),
+                               child: CircleAvatar(
+                                backgroundImage: AssetImage("jackie.png"),
+                                radius: 30,
+                                            ),
+                             ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                              child: Container(
+                                child: Text("Jackie", style: TextStyle(
+                                  color: Colors.white, fontSize: 18
+                                ),),
+                              ),
+                            ),
+
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20.0),
+                              child: Container(
+                                child: Text("Ator", style: TextStyle(
+                                  color: Color.fromARGB(255, 194, 194, 194),
+                                  fontSize: 15
+                                ),),
+                              ),
+                            ),
+                          ],
+                        )
+                      ),
+
+                      SizedBox(width: 30,),
+
+                       Container(
+                        height: 200,
+                        child: Column(
+                          children: [
+                             Padding(
+                               padding: const EdgeInsets.only(left:18.0),
+                               child: CircleAvatar(
+                                backgroundImage: AssetImage("jackie.png"),
+                                radius: 30,
+                                            ),
+                             ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                              child: Container(
+                                child: Text("Jackie", style: TextStyle(
+                                  color: Colors.white, fontSize: 18
+                                ),),
+                              ),
+                            ),
+
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20.0),
+                              child: Container(
+                                child: Text("Ator", style: TextStyle(
+                                  color: Color.fromARGB(255, 194, 194, 194),
+                                  fontSize: 15
+                                ),),
+                              ),
+                            ),
+                          ],
+                        )
+                      ),
+
+                      SizedBox(width: 30,),
+
+                       Container(
+                        height: 200,
+                        child: Column(
+                          children: [
+                             Padding(
+                               padding: const EdgeInsets.only(left:18.0),
+                               child: CircleAvatar(
+                                backgroundImage: AssetImage("jackie.png"),
+                                radius: 30,
+                                            ),
+                             ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                              child: Container(
+                                child: Text("Jackie", style: TextStyle(
+                                  color: Colors.white, fontSize: 18
+                                ),),
+                              ),
+                            ),
+
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20.0),
+                              child: Container(
+                                child: Text("Ator", style: TextStyle(
+                                  color: Color.fromARGB(255, 194, 194, 194),
+                                  fontSize: 15
+                                ),),
+                              ),
+                            ),
+                          ],
+                        )
+                      ),
+
+                      SizedBox(width: 30,),
+
+                       Container(
+                        height: 200,
+                        child: Column(
+                          children: [
+                             Padding(
+                               padding: const EdgeInsets.only(left:18.0),
+                               child: CircleAvatar(
+                                backgroundImage: AssetImage("jackie.png"),
+                                radius: 30,
+                                            ),
+                             ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                              child: Container(
+                                child: Text("Jackie", style: TextStyle(
+                                  color: Colors.white, fontSize: 18
+                                ),),
+                              ),
+                            ),
+
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20.0),
+                              child: Container(
+                                child: Text("Ator", style: TextStyle(
+                                  color: Color.fromARGB(255, 194, 194, 194),
+                                  fontSize: 15
+                                ),),
+                              ),
+                            ),
+                          ],
+                        )
+                      ),
+
+                      SizedBox(width: 30,),
+
+                       Container(
+                        height: 50,
+                        child: Column(
+                          children: [
+                             Padding(
+                               padding: const EdgeInsets.only(left:18.0),
+                               child: CircleAvatar(
+                                backgroundImage: AssetImage("jackie.png"),
+                                radius: 30,
+                                            ),
+                             ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                              child: Container(
+                                child: Text("Jackie", style: TextStyle(
+                                  color: Colors.white, fontSize: 18
+                                ),),
+                              ),
+                            ),
+
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20.0),
+                              child: Container(
+                                child: Text("Ator", style: TextStyle(
+                                  color: Color.fromARGB(255, 194, 194, 194),
+                                  fontSize: 15
+                                ),),
+                              ),
+                            ),
+                          ],
+                        )
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
