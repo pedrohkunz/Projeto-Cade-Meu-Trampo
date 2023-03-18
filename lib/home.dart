@@ -504,6 +504,41 @@ class _MyHomeState extends State<MyHome> {
               ],
             ),
           ),
+          bottomNavigationBar: BottomAppBar(
+            height: 200,
+            color: Color.fromARGB(255, 22,24,30),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 15.0),
+                  child: Text("Cadê meu trampo", style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    
+                  ),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left:120.0, right: 120.0),
+                  child: Divider(
+                    color: Colors.white,
+                    thickness: 1,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 15.0),
+                  child: Image(image: AssetImage("git.png")),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40.0),
+                  child: Text("Copyright © Dentinho App Productions", style: TextStyle(
+                    color: Color.fromARGB(255, 209, 209, 209),
+                    fontSize: 15
+                  ),),
+                )
+              ],
+            ),
+          ),
         ),
       );
   }
