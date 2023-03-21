@@ -1,9 +1,12 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:projetocademeutrampo/home.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
+import 'package:projetocademeutrampo/model/buttonImage.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 
 class MyProfile extends StatefulWidget {
@@ -86,21 +89,7 @@ class _MyProfileState extends State<MyProfile> {
                          
                               SizedBox(width: 30),
                          
-                              ElevatedButton(
-                                style: ButtonStyle(
-                                  shape: MaterialStatePropertyAll(
-                                    RoundedRectangleBorder(
-                                      side: BorderSide(color: Color.fromARGB(255, 23, 51, 134), width: 3),
-                                      borderRadius: BorderRadius.circular(40) )
-                                  ),
-                                  backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 16, 17, 21)),
-                                  padding: MaterialStateProperty.all(EdgeInsets.only(top:20, bottom: 20 ,left: 40, right: 40 ),
-                                  
-                                  ),
-                              ),
-                              onPressed: (){}, 
-                              child: Text("Contatar", style: TextStyle(color: Colors.white, fontSize: 18),) 
-                              ),
+                              pegarImagem()
                               
                             ],
                            ),
