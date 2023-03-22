@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:projetocademeutrampo/login.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
+import 'package:projetocademeutrampo/model/recomendados.dart';
 
 class MyHome extends StatefulWidget {
   const MyHome({super.key});
@@ -13,6 +14,8 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -276,10 +279,12 @@ class _MyHomeState extends State<MyHome> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Container(
-                      child: Text("Profissionais Bem Avaliados",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20),),
+                      child: SingleChildScrollView(
+                        child: Text("Profissionais Bem Avaliados",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20),),
+                      ),
                     ),
                   ),
                 ),
@@ -292,211 +297,42 @@ class _MyHomeState extends State<MyHome> {
                     children: [
                       Container(
                         height: 200,
-                        child: Column(
-                          children: [
-                             Padding(
-                               padding: const EdgeInsets.only(left:18.0),
-                               child: CircleAvatar(
-                                backgroundImage: AssetImage("jackie.png"),
-                                radius: 30,
-                                                         ),
-                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                              child: Container(
-                                child: Text("Jackie", style: TextStyle(
-                                  color: Colors.white, fontSize: 18
-                                ),),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Container(
-                                child: Text("Ator", style: TextStyle(
-                                  color: Color.fromARGB(255, 194, 194, 194),
-                                  fontSize: 15
-                                ),),
-                              ),
-                            )
-                            
-                          ],
-                        )
+                        child: MyRecomendados(nome: "Mathias", imagem: "jackie.png", profissao: "Estudante",)
                       ),
                       
-                      SizedBox(width: 30,),
+                      SizedBox(width: 28,),
 
                       Container(
                         height: 200,
-                        child: Column(
-                          children: [
-                             Padding(
-                               padding: const EdgeInsets.only(left:18.0),
-                               child: CircleAvatar(
-                                backgroundImage: AssetImage("jackie.png"),
-                                radius: 30,
-                                            ),
-                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                              child: Container(
-                                child: Text("Jackie", style: TextStyle(
-                                  color: Colors.white, fontSize: 18
-                                ),),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Container(
-                                child: Text("Ator", style: TextStyle(
-                                  color: Color.fromARGB(255, 194, 194, 194),
-                                  fontSize: 15
-                                ),),
-                              ),
-                            ),
-                          ],
-                        )
+                        child: MyRecomendados(nome: "Nathan", imagem: "Masculino.png", profissao: "Estudante",)
                       ),
 
-                      SizedBox(width: 30,),
+                      SizedBox(width: 28,),
 
-                       Container(
+                      Container(
                         height: 200,
-                        child: Column(
-                          children: [
-                             Padding(
-                               padding: const EdgeInsets.only(left:18.0),
-                               child: CircleAvatar(
-                                backgroundImage: AssetImage("jackie.png"),
-                                radius: 30,
-                                            ),
-                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                              child: Container(
-                                child: Text("Jackie", style: TextStyle(
-                                  color: Colors.white, fontSize: 18
-                                ),),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Container(
-                                child: Text("Ator", style: TextStyle(
-                                  color: Color.fromARGB(255, 194, 194, 194),
-                                  fontSize: 15
-                                ),),
-                              ),
-                            ),
-                          ],
-                        )
+                        child: MyRecomendados(nome: "Luís Thalys", imagem: "Masculino.png", profissao: "Programador",)
                       ),
 
-                      SizedBox(width: 30,),
+                      SizedBox(width: 28,),
 
-                       Container(
+                      Container(
                         height: 200,
-                        child: Column(
-                          children: [
-                             Padding(
-                               padding: const EdgeInsets.only(left:18.0),
-                               child: CircleAvatar(
-                                backgroundImage: AssetImage("jackie.png"),
-                                radius: 30,
-                                            ),
-                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                              child: Container(
-                                child: Text("Jackie", style: TextStyle(
-                                  color: Colors.white, fontSize: 18
-                                ),),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Container(
-                                child: Text("Ator", style: TextStyle(
-                                  color: Color.fromARGB(255, 194, 194, 194),
-                                  fontSize: 15
-                                ),),
-                              ),
-                            ),
-                          ],
-                        )
+                        child: MyRecomendados(nome: "Laura", imagem: "Feminino.png", profissao: "Estudante",)
                       ),
 
-                      SizedBox(width: 30,),
+                      SizedBox(width: 28,),
 
-                       Container(
+                      Container(
                         height: 200,
-                        child: Column(
-                          children: [
-                             Padding(
-                               padding: const EdgeInsets.only(left:18.0),
-                               child: CircleAvatar(
-                                backgroundImage: AssetImage("jackie.png"),
-                                radius: 30,
-                                            ),
-                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                              child: Container(
-                                child: Text("Jackie", style: TextStyle(
-                                  color: Colors.white, fontSize: 18
-                                ),),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Container(
-                                child: Text("Ator", style: TextStyle(
-                                  color: Color.fromARGB(255, 194, 194, 194),
-                                  fontSize: 15
-                                ),),
-                              ),
-                            ),
-                          ],
-                        )
+                        child: MyRecomendados(nome: "Pedro", imagem: "Masculino.png", profissao: "Estudante",)
                       ),
 
-                      SizedBox(width: 30,),
+                      SizedBox(width: 28,),
 
-                       Container(
-                        height: 50,
-                        child: Column(
-                          children: [
-                             Padding(
-                               padding: const EdgeInsets.only(left:18.0),
-                               child: CircleAvatar(
-                                backgroundImage: AssetImage("jackie.png"),
-                                radius: 30,
-                                            ),
-                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                              child: Container(
-                                child: Text("Jackie", style: TextStyle(
-                                  color: Colors.white, fontSize: 18
-                                ),),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Container(
-                                child: Text("Ator", style: TextStyle(
-                                  color: Color.fromARGB(255, 194, 194, 194),
-                                  fontSize: 15
-                                ),),
-                              ),
-                            ),
-                          ],
-                        )
+                      Container(
+                      height: 200,
+                      child: MyRecomendados(nome: "Gabriela", imagem: "Feminino.png", profissao: "Estudante",)
                       ),
                     ],
                   ),

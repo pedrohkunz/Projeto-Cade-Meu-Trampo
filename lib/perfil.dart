@@ -1,9 +1,12 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:projetocademeutrampo/home.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
+import 'package:projetocademeutrampo/model/buttonImage.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 
 class MyProfile extends StatefulWidget {
@@ -46,20 +49,20 @@ class _MyProfileState extends State<MyProfile> {
                                Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: CircleAvatar(
-                            backgroundImage: AssetImage("jackie.png"),
+                            backgroundImage: AssetImage("User.png"),
                             radius: 80,
                           ),
                         ),
                                Padding(
                            padding: const EdgeInsets.only(bottom:1.0),
-                           child: Text("Jackie Chan", style: TextStyle(
+                           child: Text("Usuário", style: TextStyle(
                             color: Colors.white, fontSize: 26
                            ),),
                          ),
                             
                          SizedBox(height: 1.5,),
                             
-                         Text("Ator", style: TextStyle(
+                         Text("Profissão", style: TextStyle(
                           color: Color.fromARGB(255, 172, 171, 171), fontSize: 20
                          ),
                          ),
@@ -86,21 +89,7 @@ class _MyProfileState extends State<MyProfile> {
                          
                               SizedBox(width: 30),
                          
-                              ElevatedButton(
-                                style: ButtonStyle(
-                                  shape: MaterialStatePropertyAll(
-                                    RoundedRectangleBorder(
-                                      side: BorderSide(color: Color.fromARGB(255, 23, 51, 134), width: 3),
-                                      borderRadius: BorderRadius.circular(40) )
-                                  ),
-                                  backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 16, 17, 21)),
-                                  padding: MaterialStateProperty.all(EdgeInsets.only(top:20, bottom: 20 ,left: 40, right: 40 ),
-                                  
-                                  ),
-                              ),
-                              onPressed: (){}, 
-                              child: Text("Contatar", style: TextStyle(color: Colors.white, fontSize: 18),) 
-                              ),
+                              pegarImagem()
                               
                             ],
                            ),
@@ -122,7 +111,7 @@ class _MyProfileState extends State<MyProfile> {
                             child: const Text("Sobre", style: TextStyle(color: Colors.white, fontSize: 25), )
                             ),
                           SizedBox(height: 13,),
-                          Text("Chan Kong-sang Embaixador da boa vontade da UNICEF, mais conhecido como Jackie Chan, é um ator, produtor, roteirista, coreógrafo, diretor de cinema, cantor e especialista honconguês em artes marciais,", style: TextStyle(color: Colors.white, fontSize: 15),),
+                          Text(". . .", style: TextStyle(color: Colors.white, fontSize: 15),),
                           SizedBox(height: 50,),
                           Column(
                             children: [

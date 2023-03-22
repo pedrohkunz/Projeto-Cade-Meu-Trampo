@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:projetocademeutrampo/cat_informatica.dart';
 import 'package:projetocademeutrampo/checagem_page.dart';
 import 'package:projetocademeutrampo/firebase_options.dart';
 import 'package:projetocademeutrampo/home.dart';
@@ -28,7 +29,8 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: ChecagemPage(),
+      home: Myinformatica()
+      //ChecagemPage(),
     );
   }
 }
