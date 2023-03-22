@@ -31,19 +31,19 @@ Widget build(BuildContext context) {
                     children: [
                       Padding(padding: EdgeInsets.only(top:9.9)),
                       CircleAvatar(
-                        backgroundImage: AssetImage("jackie.png"),
+                        backgroundImage: AssetImage("User.png"),
                         radius: 50,
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left:10.0),
                         child: Column(
                           children: [
-                            Text("jackie", style: TextStyle(
+                            Text("Usuário", style: TextStyle(
                               fontSize: 18,
                               color: Colors.white
                             ),),
                             
-                            Text("Ator", style: TextStyle(
+                            Text("Profissão", style: TextStyle(
                               fontSize: 15,
                               color: Color.fromARGB(255, 155, 155, 155)
                             ),),

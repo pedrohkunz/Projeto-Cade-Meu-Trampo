@@ -32,7 +32,7 @@ class MyNavBar extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => MyProfile()));
                       },
                       child: CircleAvatar(
-                          backgroundImage: AssetImage("jackie.png"),
+                          backgroundImage: AssetImage("User.png"),
                           radius: 25,
                         ),
                     ),

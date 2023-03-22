@@ -49,20 +49,20 @@ class _MyProfileState extends State<MyProfile> {
                                Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: CircleAvatar(
-                            backgroundImage: AssetImage("jackie.png"),
+                            backgroundImage: AssetImage("User.png"),
                             radius: 80,
                           ),
                         ),
                                Padding(
                            padding: const EdgeInsets.only(bottom:1.0),
-                           child: Text("Jackie Chan", style: TextStyle(
+                           child: Text("Usuário", style: TextStyle(
                             color: Colors.white, fontSize: 26
                            ),),
                          ),
                             
                          SizedBox(height: 1.5,),
                             
-                         Text("Ator", style: TextStyle(
+                         Text("Profissão", style: TextStyle(
                           color: Color.fromARGB(255, 172, 171, 171), fontSize: 20
                          ),
                          ),
@@ -111,7 +111,7 @@ class _MyProfileState extends State<MyProfile> {
                             child: const Text("Sobre", style: TextStyle(color: Colors.white, fontSize: 25), )
                             ),
                           SizedBox(height: 13,),
-                          Text("Chan Kong-sang Embaixador da boa vontade da UNICEF, mais conhecido como Jackie Chan, é um ator, produtor, roteirista, coreógrafo, diretor de cinema, cantor e especialista honconguês em artes marciais,", style: TextStyle(color: Colors.white, fontSize: 15),),
+                          Text(". . .", style: TextStyle(color: Colors.white, fontSize: 15),),
                           SizedBox(height: 50,),
                           Column(
                             children: [

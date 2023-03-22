@@ -17,6 +17,7 @@ class MyRecomendados extends StatelessWidget {
           padding: const EdgeInsets.only(left: 18.0),
           child: CircleAvatar(
             backgroundImage: AssetImage(this.imagem!),
+            backgroundColor: Colors.transparent,
             radius: 30,
           ),
         ),

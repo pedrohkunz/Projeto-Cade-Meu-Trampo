@@ -64,7 +64,7 @@ class _pegarImagemState extends State<pegarImagem> {
           uploadImage();
         },
         child: Text(
-          "Contatar",
+          "Editar",
           style: TextStyle(color: Colors.white, fontSize: 18),
         ));
   }
