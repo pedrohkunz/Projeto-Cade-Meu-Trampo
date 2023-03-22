@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:projetocademeutrampo/cat_informatica.dart';
 import 'package:projetocademeutrampo/login.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
@@ -55,22 +56,32 @@ class _MyHomeState extends State<MyHome> {
                         height: 200,
                         child: Column(
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                              child: Image(image: AssetImage("carinhadoti.jpg"),
-                              fit: BoxFit.cover,
-                              alignment: Alignment.topCenter,
-                              height: 120,
-                              width: 300
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(context, FadePageRoute(builder: (context)=> Myinformatica()));
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+                                child: Image(image: AssetImage("carinhadoti.jpg"),
+                                fit: BoxFit.cover,
+                                alignment: Alignment.topCenter,
+                                height: 120,
+                                width: 300
+                                ),
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Text("Informática", style: TextStyle(
-                                  color: Colors.white, fontSize: 18
-                                ),),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(context, FadePageRoute(builder: (context)=> Myinformatica()));
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text("Informática", style: TextStyle(
+                                    color: Colors.white, fontSize: 18
+                                  ),),
+                                ),
                               ),
                             ),
 
@@ -225,22 +236,26 @@ class _MyHomeState extends State<MyHome> {
                         height: 200,
                         child: Column(
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                              child: Image(image: AssetImage("professor.png"),
-                              fit: BoxFit.cover,
-                              alignment: Alignment.topCenter,
-                              height: 120,
-                              width: 300
+                              ClipRRect(
+                                borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+                                child: Image(
+                                  image: AssetImage("professor.png"),
+                                fit: BoxFit.cover,
+                                alignment: Alignment.topCenter,
+                                height: 120,
+                                width: 300,
+                            
+                                ),
                               ),
-                            ),
+                            
                             Padding(
                               padding: const EdgeInsets.only(top: 8.0, left: 20.0),
                               child: Container(
                                 alignment: Alignment.centerLeft,
                                 child: Text("Educação & Ensino", style: TextStyle(
-                                  color: Colors.white, fontSize: 18
-                                ),),
+                                  color: Colors.white, fontSize: 18,
+                                ),
+                                ),
                               ),
                             ),
 
@@ -455,3 +470,25 @@ class customSearchDelegate extends SearchDelegate {
     );
   }
   }
+
+  class FadePageRoute<T> extends PageRouteBuilder<T> {
+  final WidgetBuilder builder;
+
+  FadePageRoute({required this.builder})
+      : super(
+          transitionDuration: Duration(milliseconds: 800),
+          pageBuilder: (BuildContext context, Animation<double> animation,
+              Animation<double> secondaryAnimation) {
+            return builder(context);
+          },
+          transitionsBuilder: (BuildContext context,
+              Animation<double> animation,
+              Animation<double> secondaryAnimation,
+              Widget child) {
+            return FadeTransition(
+              opacity: animation,
+              child: child,
+            );
+          },
+        );
+}
