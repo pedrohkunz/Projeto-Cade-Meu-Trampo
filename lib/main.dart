@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:projetocademeutrampo/cat_informatica.dart';
+import 'package:projetocademeutrampo/categorias/cat_design.dart';
+import 'package:projetocademeutrampo/categorias/cat_informatica.dart';
 import 'package:projetocademeutrampo/checagem_page.dart';
 import 'package:projetocademeutrampo/firebase_options.dart';
 import 'package:projetocademeutrampo/home.dart';

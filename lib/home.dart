@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:projetocademeutrampo/cat_informatica.dart';
+import 'package:projetocademeutrampo/categorias/cat_design.dart';
+import 'package:projetocademeutrampo/categorias/cat_informatica.dart';
 import 'package:projetocademeutrampo/login.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
@@ -122,22 +123,32 @@ class _MyHomeState extends State<MyHome> {
                         height: 200,
                         child: Column(
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                              child: Image(image: AssetImage("design.jpg"),
-                              fit: BoxFit.cover,
-                              alignment: Alignment.topCenter,
-                              height: 120,
-                              width: 300
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, FadePageRoute(builder: (context)=> MyDesign()));
+                              },
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+                                child: Image(image: AssetImage("design.jpg"),
+                                fit: BoxFit.cover,
+                                alignment: Alignment.topCenter,
+                                height: 120,
+                                width: 300
+                                ),
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Text("Design", style: TextStyle(
-                                  color: Colors.white, fontSize: 18
-                                ),),
+                            GestureDetector(
+                              onTap: (){
+                                Navigator.push(context, FadePageRoute(builder: (context)=> MyDesign()));
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text("Design", style: TextStyle(
+                                    color: Colors.white, fontSize: 18
+                                  ),),
+                                ),
                               ),
                             ),
 

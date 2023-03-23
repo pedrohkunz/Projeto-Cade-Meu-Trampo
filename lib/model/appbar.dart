@@ -38,7 +38,7 @@ class MyNavBar extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           );
         }
