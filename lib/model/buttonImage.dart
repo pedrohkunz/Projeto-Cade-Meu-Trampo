@@ -66,6 +66,7 @@ class _pegarImagemState extends State<pegarImagem> {
         child: Text(
           "Editar",
           style: TextStyle(color: Colors.white, fontSize: 18),
-        ));
+        )
+      );
   }
 }
