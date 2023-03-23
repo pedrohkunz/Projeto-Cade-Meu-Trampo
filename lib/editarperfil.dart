@@ -123,9 +123,11 @@ class _MyEditorState extends State<MyEditor> {
               ],
             ),
           ),
+
           SizedBox(
             height: 20,
           ),
+
           Padding(
             padding: const EdgeInsets.only(
               left: 24.0,
@@ -163,7 +165,91 @@ class _MyEditorState extends State<MyEditor> {
                 ),
               ),
             ),
-          )
+          ),
+
+          SizedBox(
+            height: 20,
+          ),
+
+          Container(
+            margin: EdgeInsets.only(left: 25, right: 25, top: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: Color.fromARGB(255, 21, 23, 30),
+            ),
+            child: Column(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(8),
+                        topRight: Radius.circular(8)),
+                    color: Color.fromARGB(255, 28, 30, 38),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10, bottom: 8),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15.0),
+                          child: Text(
+                            "Foto do perfil",
+                            style: TextStyle(color: Colors.white, fontSize: 25),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 15.0),
+                          child: Icon(Icons.edit, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Divider(
+                  indent: 0,
+                  color: Colors.white,
+                  thickness: 1,
+                  height: 0,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left:30.0, right: 30.0, bottom: 5.0, top: 15),
+                  child: TextField(
+
+                    style: TextStyle(
+                       
+                      color: Colors.white
+                    ),
+                    decoration: InputDecoration(
+                      hintText: "Escreva sobre sua biografia, sobre seus anos de experiência, setor ou competências.",
+                      hintStyle: TextStyle(
+                        color: Color.fromARGB(255, 172, 169, 169)
+                      )
+                    ),
+                  )
+                ),
+              ],
+            ),
+          ),
+
+          SizedBox(
+            height: 30,
+          ),
+
+           ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 56, 56, 68)),
+                          padding: MaterialStateProperty.all(EdgeInsets.all(17)),
+                          textStyle: MaterialStateProperty.all(TextStyle(
+                            fontSize: 20
+                          ))
+                        ),
+                        onPressed: (){
+                    
+                        },
+                        child: Text("Salvar alterações")
+                        ),
+
         ],
       ),
     );
