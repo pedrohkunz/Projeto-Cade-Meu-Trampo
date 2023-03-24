@@ -194,7 +194,7 @@ class _MyEditorState extends State<MyEditor> {
                         Padding(
                           padding: const EdgeInsets.only(left: 15.0),
                           child: Text(
-                            "Foto do perfil",
+                            "Biografia",
                             style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
                         ),
