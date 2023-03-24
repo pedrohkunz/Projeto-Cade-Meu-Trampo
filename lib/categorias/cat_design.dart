@@ -130,9 +130,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Mathias",
-                          imagem: "jackie.png",
-                          profissao: "Estudante",
+                          nome: "Rodrigo Lima",
+                          imagem: "RodrigoLima.png",
+                          profissao: "Designer Gráfico",
                         )),
                     SizedBox(
                       width: 28,
@@ -140,9 +140,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Nathan",
-                          imagem: "Masculino.png",
-                          profissao: "Estudante",
+                          nome: "Kauan",
+                          imagem: "Kauan.png",
+                          profissao: "Designer Gráfico",
                         )),
                     SizedBox(
                       width: 28,
@@ -150,9 +150,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Luís Thalys",
-                          imagem: "Masculino.png",
-                          profissao: "Programador",
+                          nome: "Joyce",
+                          imagem: "Joyce.png",
+                          profissao: "Designer Gráfico",
                         )),
                     SizedBox(
                       width: 28,
@@ -160,9 +160,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Laura",
-                          imagem: "Feminino.png",
-                          profissao: "Estudante",
+                          nome: "Joana Machado",
+                          imagem: "JoanaMachado.png",
+                          profissao: "Designer Gráfico",
                         )),
                     SizedBox(
                       width: 28,
@@ -170,9 +170,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Pedro",
-                          imagem: "Masculino.png",
-                          profissao: "Estudante",
+                          nome: "Fernando Moraes",
+                          imagem: "FernandoMoraes.png",
+                          profissao: "Designer Gráfico",
                         )),
                     SizedBox(
                       width: 28,
@@ -180,9 +180,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Gabriela",
-                          imagem: "Feminino.png",
-                          profissao: "Estudante",
+                          nome: "wesley",
+                          imagem: "wesley.png",
+                          profissao: "Designer Gráfico",
                         )),
                   ],
                 ),
@@ -234,9 +234,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Mathias",
-                          imagem: "jackie.png",
-                          profissao: "Estudante",
+                          nome: "Wesley",
+                          imagem: "Wesley.png",
+                          profissao: "Designer de Interiores",
                         )),
                     SizedBox(
                       width: 28,
@@ -244,9 +244,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Nathan",
-                          imagem: "Masculino.png",
-                          profissao: "Estudante",
+                          nome: "Fernando Mores",
+                          imagem: "FernandoMoraes.png",
+                          profissao: "Designer de Interiores",
                         )),
                     SizedBox(
                       width: 28,
@@ -254,9 +254,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Luís Thalys",
-                          imagem: "Masculino.png",
-                          profissao: "Programador",
+                          nome: "Kauan",
+                          imagem: "Kauan.png",
+                          profissao: "Designer de Interiores",
                         )),
                     SizedBox(
                       width: 28,
@@ -264,9 +264,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Laura",
-                          imagem: "Feminino.png",
-                          profissao: "Estudante",
+                          nome: "Joana Machado",
+                          imagem: "JoanaMachado.png",
+                          profissao: "Designer de Interiores",
                         )),
                     SizedBox(
                       width: 28,
@@ -274,9 +274,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Pedro",
-                          imagem: "Masculino.png",
-                          profissao: "Estudante",
+                          nome: "Rodrigo Lima",
+                          imagem: "RodrigoLima.png",
+                          profissao: "Designer de Interiores",
                         )),
                     SizedBox(
                       width: 28,
@@ -284,9 +284,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Gabriela",
-                          imagem: "Feminino.png",
-                          profissao: "Estudante",
+                          nome: "Joyce",
+                          imagem: "Joyce.png",
+                          profissao: "Designer de Interiores",
                         )),
                   ],
                 ),
@@ -338,9 +338,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Mathias",
-                          imagem: "jackie.png",
-                          profissao: "Estudante",
+                           nome: "Joyce",
+                          imagem: "Joyce.png",
+                          profissao: "Designer de Serviço",
                         )),
                     SizedBox(
                       width: 28,
@@ -348,9 +348,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Nathan",
-                          imagem: "Masculino.png",
-                          profissao: "Estudante",
+                            nome: "Rodrigo Lima",
+                          imagem: "RodrigoLima.png",
+                          profissao: "Designer de Interiores",
                         )),
                     SizedBox(
                       width: 28,
@@ -358,9 +358,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Luís Thalys",
-                          imagem: "Masculino.png",
-                          profissao: "Programador",
+                           nome: "Joana Machado",
+                          imagem: "JoanaMachado.png",
+                          profissao: "Designer de Serviço",
                         )),
                     SizedBox(
                       width: 28,
@@ -368,9 +368,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Laura",
-                          imagem: "Feminino.png",
-                          profissao: "Estudante",
+                        nome: "Kauan",
+                          imagem: "Kauan.png",
+                          profissao: "Designer de Serviço",
                         )),
                     SizedBox(
                       width: 28,
@@ -378,9 +378,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Pedro",
-                          imagem: "Masculino.png",
-                          profissao: "Estudante",
+                          nome: "Wesley",
+                          imagem: "Wesley.png",
+                          profissao: "Designer de Serviço",
                         )),
                     SizedBox(
                       width: 28,
@@ -388,9 +388,9 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Gabriela",
-                          imagem: "Feminino.png",
-                          profissao: "Estudante",
+                           nome: "Fernando Mores",
+                          imagem: "FernandoMoraes.png",
+                          profissao: "Designer de Serviço",
                         )),
                   ],
                 ),

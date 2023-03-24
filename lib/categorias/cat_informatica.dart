@@ -130,9 +130,9 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Mathias",
-                          imagem: "jackie.png",
-                          profissao: "Estudante",
+                        nome: "Joana Machado",
+                          imagem: "JoanaMachado.png",
+                          profissao: "Programador Junior",
                         )),
                     SizedBox(
                       width: 28,
@@ -140,18 +140,8 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Nathan",
-                          imagem: "Masculino.png",
-                          profissao: "Estudante",
-                        )),
-                    SizedBox(
-                      width: 28,
-                    ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "Luís Thalys",
-                          imagem: "Masculino.png",
+                          nome: "Joyce",
+                          imagem: "joyce.png",
                           profissao: "Programador",
                         )),
                     SizedBox(
@@ -160,9 +150,9 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Laura",
-                          imagem: "Feminino.png",
-                          profissao: "Estudante",
+                          nome: "Wesley",
+                          imagem: "Wesley.png",
+                          profissao: "Programador Junior",
                         )),
                     SizedBox(
                       width: 28,
@@ -170,9 +160,9 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Pedro",
-                          imagem: "Masculino.png",
-                          profissao: "Estudante",
+                          nome: "Fernando Moraes",
+                          imagem: "FernandoMOraes.png",
+                          profissao: "Programador",
                         )),
                     SizedBox(
                       width: 28,
@@ -180,9 +170,19 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Gabriela",
-                          imagem: "Feminino.png",
-                          profissao: "Estudante",
+                          nome: "Rodrigo Lima",
+                          imagem: "RodrigoLima.png",
+                          profissao: "Programador",
+                        )),
+                    SizedBox(
+                      width: 28,
+                    ),
+                    Container(
+                        height: 200,
+                        child: MyRecomendados(
+                          nome: "Kauan",
+                          imagem: "Kauan.png",
+                          profissao: "Programador junior",
                         )),
                   ],
                 ),
@@ -234,28 +234,8 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Mathias",
-                          imagem: "jackie.png",
-                          profissao: "Estudante",
-                        )),
-                    SizedBox(
-                      width: 28,
-                    ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "Nathan",
-                          imagem: "Masculino.png",
-                          profissao: "Estudante",
-                        )),
-                    SizedBox(
-                      width: 28,
-                    ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "Luís Thalys",
-                          imagem: "Masculino.png",
+                           nome: "Wesley",
+                          imagem: "Wesley.png",
                           profissao: "Programador",
                         )),
                     SizedBox(
@@ -264,9 +244,9 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Laura",
-                          imagem: "Feminino.png",
-                          profissao: "Estudante",
+                        nome: "Joyce",
+                          imagem: "joyce.png",
+                          profissao: "Programador",
                         )),
                     SizedBox(
                       width: 28,
@@ -274,9 +254,9 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Pedro",
-                          imagem: "Masculino.png",
-                          profissao: "Estudante",
+                           nome: "Fernando Moraes",
+                          imagem: "FernandoMOraes.png",
+                          profissao: "Programador",
                         )),
                     SizedBox(
                       width: 28,
@@ -284,9 +264,30 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Gabriela",
-                          imagem: "Feminino.png",
-                          profissao: "Estudante",
+                           nome: "Joana Machado",
+                          imagem: "JoanaMachado.png",
+                          profissao: "Programador Junior",
+                        )),
+                    SizedBox(
+                      width: 28,
+                    ),
+                    Container(
+                        height: 200,
+                        child: MyRecomendados(
+                           nome: "Rodrigo Lima",
+                          imagem: "RodrigoLima.png",
+                          profissao: "Programador",
+                         
+                        )),
+                    SizedBox(
+                      width: 28,
+                    ),
+                    Container(
+                        height: 200,
+                        child: MyRecomendados(
+                         nome: "Kauan",
+                          imagem: "Kauan.png",
+                          profissao: "Programador junior",
                         )),
                   ],
                 ),
