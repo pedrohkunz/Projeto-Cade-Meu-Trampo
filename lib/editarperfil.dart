@@ -215,14 +215,16 @@ class _MyEditorState extends State<MyEditor> {
                 Padding(
                   padding: const EdgeInsets.only(left:30.0, right: 30.0, bottom: 5.0, top: 15),
                   child: TextField(
-
+                      
                     style: TextStyle(
-                       
+                  
                       color: Colors.white
                     ),
                     decoration: InputDecoration(
+                      hintMaxLines: 150,
                       hintText: "Escreva sobre sua biografia, sobre seus anos de experiência, setor ou competências.",
                       hintStyle: TextStyle(
+                        fontSize: 14,
                         color: Color.fromARGB(255, 172, 169, 169)
                       )
                     ),
