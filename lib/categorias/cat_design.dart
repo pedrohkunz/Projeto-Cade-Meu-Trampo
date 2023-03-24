@@ -244,7 +244,7 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Fernando Mores",
+                          nome: "Fernando Moraes",
                           imagem: "FernandoMoraes.png",
                           profissao: "Designer de Interiores",
                         )),
@@ -388,7 +388,7 @@ class _MyDesignState extends State<MyDesign> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                           nome: "Fernando Mores",
+                           nome: "Fernando Moraes",
                           imagem: "FernandoMoraes.png",
                           profissao: "Designer de Serviço",
                         )),

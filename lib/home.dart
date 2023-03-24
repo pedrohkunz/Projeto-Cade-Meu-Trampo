@@ -342,7 +342,7 @@ class _MyHomeState extends State<MyHome> {
                         },
                         child: Container(
                           height: 200,
-                          child: MyRecomendados(nome: "Fernando", imagem: "FernandoMoraes.png", profissao: "Designer",)
+                          child: MyRecomendados(nome: "Fernando ", imagem: "FernandoMoraes.png", profissao: "Designer",)
                         ),
                       ),
 

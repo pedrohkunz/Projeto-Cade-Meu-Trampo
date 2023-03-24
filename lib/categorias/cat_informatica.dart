@@ -140,8 +140,8 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Joyce",
-                          imagem: "joyce.png",
+                         nome: "Kauan",
+                          imagem: "Kauan.png",
                           profissao: "Programador",
                         )),
                     SizedBox(
@@ -161,7 +161,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                         height: 200,
                         child: MyRecomendados(
                           nome: "Fernando Moraes",
-                          imagem: "FernandoMOraes.png",
+                          imagem: "FernandoMoraes.png",
                           profissao: "Programador",
                         )),
                     SizedBox(
@@ -180,8 +180,8 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Kauan",
-                          imagem: "Kauan.png",
+                          nome: "Joyce",
+                          imagem: "Joyce.png",
                           profissao: "Programador junior",
                         )),
                   ],
@@ -255,7 +255,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                         height: 200,
                         child: MyRecomendados(
                            nome: "Fernando Moraes",
-                          imagem: "FernandoMOraes.png",
+                          imagem: "FernandoMoraes.png",
                           profissao: "Programador",
                         )),
                     SizedBox(
@@ -287,7 +287,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                         child: MyRecomendados(
                          nome: "Kauan",
                           imagem: "Kauan.png",
-                          profissao: "Programador junior",
+                          profissao: "Programador Junior",
                         )),
                   ],
                 ),
