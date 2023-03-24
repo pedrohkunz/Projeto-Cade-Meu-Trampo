@@ -8,6 +8,9 @@ import 'package:projetocademeutrampo/firebase_options.dart';
 import 'package:projetocademeutrampo/home.dart';
 import 'package:projetocademeutrampo/perfil.dart';
 import 'package:projetocademeutrampo/perfil.dart';
+import 'package:projetocademeutrampo/profiles/Fernando.dart';
+import 'package:projetocademeutrampo/profiles/Joana.dart';
+import 'package:projetocademeutrampo/profiles/Rodrigo.dart';
 import 'login.dart';
 import 'dart:js';
 

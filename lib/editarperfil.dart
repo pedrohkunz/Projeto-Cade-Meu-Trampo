@@ -105,7 +105,7 @@ class _MyEditorState extends State<MyEditor> {
                       });
                     },
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(200), // bordas arredondadas
+                      borderRadius: BorderRadius.circular(100), // bordas arredondadas
                       child: imagemPerfil == null
                           ? Image.asset(
                               "User.png",
@@ -215,9 +215,7 @@ class _MyEditorState extends State<MyEditor> {
                 Padding(
                   padding: const EdgeInsets.only(left:30.0, right: 30.0, bottom: 5.0, top: 15),
                   child: TextField(
-                      
                     style: TextStyle(
-                  
                       color: Colors.white
                     ),
                     decoration: InputDecoration(
@@ -239,18 +237,18 @@ class _MyEditorState extends State<MyEditor> {
           ),
 
            ElevatedButton(
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 56, 56, 68)),
-                          padding: MaterialStateProperty.all(EdgeInsets.all(17)),
-                          textStyle: MaterialStateProperty.all(TextStyle(
-                            fontSize: 20
-                          ))
-                        ),
-                        onPressed: (){
-                    
-                        },
-                        child: Text("Salvar alterações")
-                        ),
+            style: ButtonStyle(
+              backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 56, 56, 68)),
+              padding: MaterialStateProperty.all(EdgeInsets.all(17)),
+              textStyle: MaterialStateProperty.all(TextStyle(
+                fontSize: 20
+              ))
+            ),
+            onPressed: (){
+        
+            },
+            child: Text("Salvar alterações")
+          ),
 
         ],
       ),

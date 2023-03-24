@@ -7,6 +7,9 @@ import 'package:projetocademeutrampo/login.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
 import 'package:projetocademeutrampo/model/recomendados.dart';
+import 'package:projetocademeutrampo/profiles/Fernando.dart';
+import 'package:projetocademeutrampo/profiles/Joana.dart';
+import 'package:projetocademeutrampo/profiles/Rodrigo.dart';
 
 class MyHome extends StatefulWidget {
   const MyHome({super.key});
@@ -321,45 +324,55 @@ class _MyHomeState extends State<MyHome> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      Container(
-                        height: 200,
-                        child: MyRecomendados(nome: "Mathias", imagem: "jackie.png", profissao: "Estudante",)
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyRodrigo()));
+                        },
+                        child: Container(
+                          height: 200,
+                          child: MyRecomendados(nome: "Rodrigo", imagem: "RodrigoLima.png", profissao: "Programador",)
+                        ),
                       ),
                       
                       SizedBox(width: 28,),
 
-                      Container(
-                        height: 200,
-                        child: MyRecomendados(nome: "Nathan", imagem: "Masculino.png", profissao: "Estudante",)
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyFernando()));
+                        },
+                        child: Container(
+                          height: 200,
+                          child: MyRecomendados(nome: "Fernando", imagem: "FernandoMoraes.png", profissao: "Designer",)
+                        ),
+                      ),
+
+                      SizedBox(width: 28,),
+
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyJoana()));
+                        },
+                        child: Container(
+                          height: 200,
+                          child: MyRecomendados(nome: "Joana", imagem: "JoanaMachado.png", profissao: "Designer",)
+                        ),
                       ),
 
                       SizedBox(width: 28,),
 
                       Container(
                         height: 200,
-                        child: MyRecomendados(nome: "Luís Thalys", imagem: "Masculino.png", profissao: "Programador",)
+                        child: MyRecomendados(nome: "Joyce", imagem: "Joyce.png", profissao: "Arquiteta",)
                       ),
 
                       SizedBox(width: 28,),
 
                       Container(
                         height: 200,
-                        child: MyRecomendados(nome: "Laura", imagem: "Feminino.png", profissao: "Estudante",)
+                        child: MyRecomendados(nome: "Pedro", imagem: "Kauan.png", profissao: "Estudante",)
                       ),
 
                       SizedBox(width: 28,),
-
-                      Container(
-                        height: 200,
-                        child: MyRecomendados(nome: "Pedro", imagem: "Masculino.png", profissao: "Estudante",)
-                      ),
-
-                      SizedBox(width: 28,),
-
-                      Container(
-                      height: 200,
-                      child: MyRecomendados(nome: "Gabriela", imagem: "Feminino.png", profissao: "Estudante",)
-                      ),
                     ],
                   ),
                 ),
@@ -498,6 +511,30 @@ class customSearchDelegate extends SearchDelegate {
               Widget child) {
             return FadeTransition(
               opacity: animation,
+              child: child,
+            );
+          },
+        );
+}
+
+class SlidePageRoute extends PageRouteBuilder {
+  final Widget page;
+
+  SlidePageRoute({required this.page})
+      : super(
+          pageBuilder: (BuildContext context, Animation<double> animation,
+              Animation<double> secondaryAnimation) {
+            return page;
+          },
+          transitionsBuilder: (BuildContext context,
+              Animation<double> animation,
+              Animation<double> secondaryAnimation,
+              Widget child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0.0, 1.0),
+                end: Offset.zero,
+              ).animate(animation),
               child: child,
             );
           },
