@@ -6,8 +6,9 @@ import 'package:projetocademeutrampo/editarperfil.dart';
 import 'package:projetocademeutrampo/home.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
-import 'package:projetocademeutrampo/model/buttonImage.dart';
+import 'package:projetocademeutrampo/model/botaoTesteImagem.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:projetocademeutrampo/model/fotoDePerfil.dart';
 
 
 class MyProfile extends StatefulWidget {
@@ -16,6 +17,7 @@ class MyProfile extends StatefulWidget {
   @override
   State<MyProfile> createState() => _MyProfileState();
 }
+
 
 class _MyProfileState extends State<MyProfile> {
   @override
@@ -46,78 +48,74 @@ class _MyProfileState extends State<MyProfile> {
                             color: Color.fromARGB(255, 255, 255, 255),
                           ),
                         ),
-                        
-                               Padding(
+                        Padding(
                           padding: const EdgeInsets.all(15.0),
-                          child: CircleAvatar(
-                            backgroundImage: AssetImage("User.png"),
-                            radius: 80,
-                          ),
+                          child: fotoDePerfil()
                         ),
-                               Padding(
+                        Padding(
                            padding: const EdgeInsets.only(bottom:1.0),
                            child: Text("Usuário", style: TextStyle(
                             color: Colors.white, fontSize: 26
                            ),),
-                         ),
+                        ),
                             
-                         SizedBox(height: 1.5,),
+                        SizedBox(height: 1.5,),
                             
-                         Text("Profissão", style: TextStyle(
-                          color: Color.fromARGB(255, 172, 171, 171), fontSize: 20
-                         ),
-                         ),
-      
-                         Padding(
-                           padding: const EdgeInsets.only(top: 25),
-                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              ElevatedButton(
-                                style: ButtonStyle(
-                                  shape: MaterialStatePropertyAll(
-                                    RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(40) )
-                                  ),
-                                  backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 23, 51, 134)),
-                                  padding: MaterialStateProperty.all(EdgeInsets.only(top:20, bottom: 20 ,left: 40, right: 40 ),
-                                  
-                                  ),
-                              ),
-                              onPressed: (){}, 
-                              child: Text("Seguir", style: TextStyle(color: Colors.white, fontSize: 18),) 
-                              ),
-                         
-                              SizedBox(width: 30),
-                         
-                              ElevatedButton(
-                                style: ButtonStyle(
-                                  shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                                      side:
-                                          BorderSide(color: Color.fromARGB(255, 23, 51, 134), width: 3),
-                                      borderRadius: BorderRadius.circular(40))),
-                                  backgroundColor:
-                                      MaterialStatePropertyAll<Color>(Color.fromARGB(255, 16, 17, 21)),
-                                  padding: MaterialStateProperty.all(
-                                    EdgeInsets.only(top: 20, bottom: 20, left: 40, right: 40),
-                                  ),
+                        Text("Profissão", style: TextStyle(
+                        color: Color.fromARGB(255, 172, 171, 171), fontSize: 20
+                        ),
+                        ),
+    
+                        Padding(
+                          padding: const EdgeInsets.only(top: 25),
+                          child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ElevatedButton(
+                              style: ButtonStyle(
+                                shape: MaterialStatePropertyAll(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(40) )
                                 ),
-                                onPressed: () async {
-                                  Navigator.push(context, SlidePageRoute(page: MyEditor()));
-                                },
-                                child: Text(
-                                  "Editar",
-                                  style: TextStyle(color: Colors.white, fontSize: 18),
-                                )
+                                backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 23, 51, 134)),
+                                padding: MaterialStateProperty.all(EdgeInsets.only(top:20, bottom: 20 ,left: 40, right: 40 ),
+                                
+                                ),
+                            ),
+                            onPressed: (){}, 
+                            child: Text("Seguir", style: TextStyle(color: Colors.white, fontSize: 18),) 
+                            ),
+                        
+                            SizedBox(width: 30),
+                        
+                            ElevatedButton(
+                              style: ButtonStyle(
+                                shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                                    side:
+                                        BorderSide(color: Color.fromARGB(255, 23, 51, 134), width: 3),
+                                    borderRadius: BorderRadius.circular(40))),
+                                backgroundColor:
+                                    MaterialStatePropertyAll<Color>(Color.fromARGB(255, 16, 17, 21)),
+                                padding: MaterialStateProperty.all(
+                                  EdgeInsets.only(top: 20, bottom: 20, left: 40, right: 40),
+                                ),
+                              ),
+                              onPressed: () async {
+                                Navigator.push(context, SlidePageRoute(page: MyEditor()));
+                              },
+                              child: Text(
+                                "Editar",
+                                style: TextStyle(color: Colors.white, fontSize: 18),
                               )
-                              
-                            ],
-                           ),
-                         ),
+                            )
+                            
+                          ],
+                          ),
+                        ),
       
-                         SizedBox(
-                          height: 25,
-                         ),
+                        SizedBox(
+                        height: 25,
+                        ),
                       ],
                     ),
                   ),

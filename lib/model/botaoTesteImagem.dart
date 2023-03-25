@@ -1,7 +1,10 @@
 import 'dart:async';
 import 'dart:io';
+import 'dart:core';
 import 'dart:html';
 import 'dart:typed_data';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:path/path.dart' as path;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +21,7 @@ class pegarImagem extends StatefulWidget {
 }
 
 class _pegarImagemState extends State<pegarImagem> {
+
   Future<void> uploadImage() async {
     final picker = InputElement()..type = 'file';
     final completer = Completer<Uint8List>();
@@ -35,15 +39,21 @@ class _pegarImagemState extends State<pegarImagem> {
     });
 
     picker.click();
+    // essa primeira parte de cima não foi pro código final só a de baixo
 
     final bytes = await completer.future;
-    final fileName = picker.files!.first.name;
-    final ref = FirebaseStorage.instance.ref('uploads/$fileName');
+    // código acima para colocar imagem na variavel
+    final User? user = FirebaseAuth.instance.currentUser;
+    String? email = user!.email;
+    print('Email do usuário: $email');
+    String fileName = email! + 'Foto';
 
+    //envia e puxa a puxa a url
+    final ref = FirebaseStorage.instance.ref('uploads/$fileName.png');
     await ref.putData(bytes);
-
     final url = await ref.getDownloadURL();
     print('File uploaded: $url');
+    setState(() {});
   }
 
   @override
@@ -64,9 +74,8 @@ class _pegarImagemState extends State<pegarImagem> {
           uploadImage();
         },
         child: Text(
-          "Editar",
+          "Imagem",
           style: TextStyle(color: Colors.white, fontSize: 18),
-        )
-      );
+        ));
   }
 }

@@ -8,6 +8,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:projetocademeutrampo/checagem_page.dart';
 import 'package:projetocademeutrampo/home.dart';
 import 'package:projetocademeutrampo/login.dart';
+import 'package:projetocademeutrampo/model/fotoDoDrawer.dart';
 import 'package:projetocademeutrampo/perfil.dart';
 import 'package:projetocademeutrampo/cadastropage.dart';
 
@@ -30,10 +31,7 @@ Widget build(BuildContext context) {
                   child: Row(
                     children: [
                       Padding(padding: EdgeInsets.only(top:9.9)),
-                      CircleAvatar(
-                        backgroundImage: AssetImage("User.png"),
-                        radius: 50,
-                      ),
+                      fotoDoDrawer(),
                       Padding(
                         padding: const EdgeInsets.only(left:10.0),
                         child: Column(

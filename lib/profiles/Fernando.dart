@@ -6,7 +6,7 @@ import 'package:projetocademeutrampo/editarperfil.dart';
 import 'package:projetocademeutrampo/home.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
-import 'package:projetocademeutrampo/model/buttonImage.dart';
+import 'package:projetocademeutrampo/model/botaoTesteImagem.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
 

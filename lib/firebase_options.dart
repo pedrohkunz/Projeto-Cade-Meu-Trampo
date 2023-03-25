@@ -50,6 +50,7 @@ class DefaultFirebaseOptions {
     projectId: 'cademeutrampo',
     authDomain: 'cademeutrampo.firebaseapp.com',
     storageBucket: 'cademeutrampo.appspot.com',
+    databaseURL: 'https://cademeutrampo.firebaseio.com' 
   );
 
   static const FirebaseOptions android = FirebaseOptions(

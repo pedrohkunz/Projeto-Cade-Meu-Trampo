@@ -4,6 +4,9 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
 import 'package:projetocademeutrampo/model/recomendados.dart';
+import 'package:projetocademeutrampo/profiles/Fernando.dart';
+import 'package:projetocademeutrampo/profiles/Joana.dart';
+import 'package:projetocademeutrampo/profiles/Rodrigo.dart';
 
 class Myinformatica extends StatefulWidget {
   const Myinformatica({super.key});
@@ -127,13 +130,18 @@ class _MyinformaticaState extends State<Myinformatica> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                        nome: "Joana Machado",
-                          imagem: "JoanaMachado.png",
-                          profissao: "Programador Junior",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyJoana()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                          nome: "Joana Machado",
+                            imagem: "JoanaMachado.png",
+                            profissao: "Programador Junior",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
@@ -157,23 +165,33 @@ class _MyinformaticaState extends State<Myinformatica> {
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "Fernando Moraes",
-                          imagem: "FernandoMoraes.png",
-                          profissao: "Programador",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyFernando()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                            nome: "Fernando Moraes",
+                            imagem: "FernandoMoraes.png",
+                            profissao: "Programador",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "Rodrigo Lima",
-                          imagem: "RodrigoLima.png",
-                          profissao: "Programador",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyRodrigo()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                            nome: "Rodrigo Lima",
+                            imagem: "RodrigoLima.png",
+                            profissao: "Programador",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
@@ -197,7 +215,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                     Padding(
                       padding: const EdgeInsets.only(top: 15.0),
                       child: Text(
-                        "Programação",
+                        "Assistencia Técnica",
                         style: TextStyle(
                           fontSize: 30,
                           color: Color.fromARGB(255, 68, 124, 218),
@@ -251,34 +269,49 @@ class _MyinformaticaState extends State<Myinformatica> {
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                           nome: "Fernando Moraes",
-                          imagem: "FernandoMoraes.png",
-                          profissao: "Programador",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyFernando()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                             nome: "Fernando Moraes",
+                            imagem: "FernandoMoraes.png",
+                            profissao: "Programador",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                           nome: "Joana Machado",
-                          imagem: "JoanaMachado.png",
-                          profissao: "Programador Junior",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyJoana()));
+                        },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                             nome: "Joana Machado",
+                            imagem: "JoanaMachado.png",
+                            profissao: "Programador Junior",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                           nome: "Rodrigo Lima",
-                          imagem: "RodrigoLima.png",
-                          profissao: "Programador",
-                         
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyRodrigo()));
+                        },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                             nome: "Rodrigo Lima",
+                            imagem: "RodrigoLima.png",
+                            profissao: "Programador",
+                           
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
@@ -345,4 +378,28 @@ class _MyinformaticaState extends State<Myinformatica> {
       ),
     );
   }
+}
+
+class SlidePageRoute extends PageRouteBuilder {
+  final Widget page;
+
+  SlidePageRoute({required this.page})
+      : super(
+          pageBuilder: (BuildContext context, Animation<double> animation,
+              Animation<double> secondaryAnimation) {
+            return page;
+          },
+          transitionsBuilder: (BuildContext context,
+              Animation<double> animation,
+              Animation<double> secondaryAnimation,
+              Widget child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0.0, 1.0),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
 }

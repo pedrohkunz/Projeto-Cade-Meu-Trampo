@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:projetocademeutrampo/home.dart';
+import 'package:projetocademeutrampo/model/fotoDaNavBar.dart';
 import 'package:projetocademeutrampo/perfil.dart';
 
 class MyNavBar extends StatelessWidget {
@@ -31,10 +32,7 @@ class MyNavBar extends StatelessWidget {
                         context, 
                         MaterialPageRoute(builder: (context) => MyProfile()));
                       },
-                      child: CircleAvatar(
-                          backgroundImage: AssetImage("User.png"),
-                          radius: 25,
-                        ),
+                      child: fotoDaNavBar()
                     ),
                   ),
                 ],

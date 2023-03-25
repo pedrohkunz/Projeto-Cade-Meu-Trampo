@@ -1,9 +1,14 @@
+import 'dart:convert';
+
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'dart:html' as html;
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
+import 'package:projetocademeutrampo/model/botaoTesteImagem.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
 
 class MyEditor extends StatefulWidget {
@@ -15,6 +20,7 @@ class MyEditor extends StatefulWidget {
 
 class _MyEditorState extends State<MyEditor> {
   String? imagemPerfil;
+  String? imagemPerfilExibida;
 
   @override
   Widget build(BuildContext context) {
@@ -99,14 +105,16 @@ class _MyEditorState extends State<MyEditor> {
                           reader.onLoadEnd.listen((event) {
                             setState(() {
                               imagemPerfil = reader.result as String;
+                              imagemPerfilExibida = imagemPerfil;
                             });
                           });
                         }
                       });
                     },
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(100), // bordas arredondadas
-                      child: imagemPerfil == null
+                      borderRadius:
+                          BorderRadius.circular(100), // bordas arredondadas
+                      child: imagemPerfilExibida == null
                           ? Image.asset(
                               "User.png",
                               width: 200,
@@ -213,21 +221,18 @@ class _MyEditorState extends State<MyEditor> {
                   height: 0,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left:30.0, right: 30.0, bottom: 5.0, top: 15),
-                  child: TextField(
-                    style: TextStyle(
-                      color: Colors.white
-                    ),
-                    decoration: InputDecoration(
-                      hintMaxLines: 150,
-                      hintText: "Escreva sobre sua biografia, sobre seus anos de experiência, setor ou competências.",
-                      hintStyle: TextStyle(
-                        fontSize: 14,
-                        color: Color.fromARGB(255, 172, 169, 169)
-                      )
-                    ),
-                  )
-                ),
+                    padding: const EdgeInsets.only(
+                        left: 30.0, right: 30.0, bottom: 5.0, top: 15),
+                    child: TextField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                          hintMaxLines: 150,
+                          hintText:
+                              "Escreva sobre sua biografia, sobre seus anos de experiência, setor ou competências.",
+                          hintStyle: TextStyle(
+                              fontSize: 14,
+                              color: Color.fromARGB(255, 172, 169, 169))),
+                    )),
               ],
             ),
           ),
@@ -235,21 +240,39 @@ class _MyEditorState extends State<MyEditor> {
           SizedBox(
             height: 30,
           ),
+          
+          ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll<Color>(
+                      Color.fromARGB(255, 56, 56, 68)),
+                  padding: MaterialStateProperty.all(EdgeInsets.all(17)),
+                  textStyle:
+                      MaterialStateProperty.all(TextStyle(fontSize: 20))),
+              onPressed: () async {
+                // pega o email do usuario atual
+                final User? user = FirebaseAuth.instance.currentUser;
+                String? email = user!.email;
+                //fazer aqui dentro o envio do nome
 
-           ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 56, 56, 68)),
-              padding: MaterialStateProperty.all(EdgeInsets.all(17)),
-              textStyle: MaterialStateProperty.all(TextStyle(
-                fontSize: 20
-              ))
-            ),
-            onPressed: (){
-        
-            },
-            child: Text("Salvar alterações")
-          ),
+                //fazer aqui dentro o envio do biografia
+                
+                //transforma o imagemPerfil para poder ir como PNG e envia
+                final bytes = base64Decode(imagemPerfil!.split(',').last);
+                final storage = FirebaseStorage.instance;
+                String fileName = email! + 'Foto';
+                final ref = storage.ref().child('uploads/$fileName.png');
+                final metadata = SettableMetadata(
+                  cacheControl: 'no-cache',
+                );
+                final uploadTask = ref.putData(bytes, metadata);
 
+                await uploadTask.whenComplete(() async {
+                  final url = await ref.getDownloadURL();
+                  print('File uploaded: $url');
+                  setState(() {});
+                });
+              },
+              child: Text("Salvar alterações")),
         ],
       ),
     );
