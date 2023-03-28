@@ -28,7 +28,7 @@ class _MyinformaticaState extends State<Myinformatica> {
             children: [
               Stack(
                 children: [
-                  Image.asset('carinhadoti.jpg'),
+                  Image.network('https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Fcarinhadoti.jpg?alt=media&token=324f3fa5-5f5f-46a9-af20-cc19530e6d58'),
                   Positioned(
                     top: 30,
                     left: 10,
@@ -75,7 +75,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                       padding: const EdgeInsets.only(
                           left: 30.0, right: 30.0, top: 15, bottom: 20),
                       child: Text(
-                        "Aborda problema em diversas partes da eletronica, como geladeiras, microondas, carros, tudo que envolve eletricidade menos computadores.",
+                        "A área de informática aborda diversos problemas e desafios, tais como segurança da informação, desenvolvimento de software, gerenciamento de banco de dados, redes de computadores, inteligência artificial, e assistência técnica.",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
@@ -138,7 +138,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                           height: 200,
                           child: MyRecomendados(
                           nome: "Joana Machado",
-                            imagem: "JoanaMachado.png",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoanaMachado.png?alt=media&token=4856ddee-6b3f-4c51-8b2e-29bcf9561e4b",
                             profissao: "Programador Junior",
                           )),
                     ),
@@ -149,7 +149,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                         height: 200,
                         child: MyRecomendados(
                          nome: "Kauan",
-                          imagem: "Kauan.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FKauan.png?alt=media&token=962c13e1-085d-4772-806a-51ba3ba6a832",
                           profissao: "Programador",
                         )),
                     SizedBox(
@@ -159,7 +159,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                         height: 200,
                         child: MyRecomendados(
                           nome: "Wesley",
-                          imagem: "Wesley.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FWesley.png?alt=media&token=265fb78b-be4f-4aec-9d9a-1a7c848b692f",
                           profissao: "Programador Junior",
                         )),
                     SizedBox(
@@ -173,7 +173,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                           height: 200,
                           child: MyRecomendados(
                             nome: "Fernando Moraes",
-                            imagem: "FernandoMoraes.png",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FFernandoMoraes.png?alt=media&token=d456c8b8-b233-4f64-8dcd-cd64b3d5b908",
                             profissao: "Programador",
                           )),
                     ),
@@ -188,7 +188,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                           height: 200,
                           child: MyRecomendados(
                             nome: "Rodrigo Lima",
-                            imagem: "RodrigoLima.png",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FRodrigoLima.png?alt=media&token=3a1e3c47-f1e5-4c14-acf8-8cd997a91a19",
                             profissao: "Programador",
                           )),
                     ),
@@ -199,7 +199,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                         height: 200,
                         child: MyRecomendados(
                           nome: "Joyce",
-                          imagem: "Joyce.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoyce.png?alt=media&token=a0482283-1aeb-4513-950b-c1ad28fba840",
                           profissao: "Programador junior",
                         )),
                   ],
@@ -253,7 +253,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                         height: 200,
                         child: MyRecomendados(
                            nome: "Wesley",
-                          imagem: "Wesley.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FWesley.png?alt=media&token=265fb78b-be4f-4aec-9d9a-1a7c848b692f",
                           profissao: "Programador",
                         )),
                     SizedBox(
@@ -263,7 +263,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                         height: 200,
                         child: MyRecomendados(
                         nome: "Joyce",
-                          imagem: "joyce.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoyce.png?alt=media&token=a0482283-1aeb-4513-950b-c1ad28fba840",
                           profissao: "Programador",
                         )),
                     SizedBox(
@@ -277,7 +277,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                           height: 200,
                           child: MyRecomendados(
                              nome: "Fernando Moraes",
-                            imagem: "FernandoMoraes.png",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FFernandoMoraes.png?alt=media&token=d456c8b8-b233-4f64-8dcd-cd64b3d5b908",
                             profissao: "Programador",
                           )),
                     ),
@@ -292,7 +292,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                           height: 200,
                           child: MyRecomendados(
                              nome: "Joana Machado",
-                            imagem: "JoanaMachado.png",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoanaMachado.png?alt=media&token=4856ddee-6b3f-4c51-8b2e-29bcf9561e4b",
                             profissao: "Programador Junior",
                           )),
                     ),
@@ -307,7 +307,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                           height: 200,
                           child: MyRecomendados(
                              nome: "Rodrigo Lima",
-                            imagem: "RodrigoLima.png",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FRodrigoLima.png?alt=media&token=3a1e3c47-f1e5-4c14-acf8-8cd997a91a19",
                             profissao: "Programador",
                            
                           )),
@@ -319,7 +319,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                         height: 200,
                         child: MyRecomendados(
                          nome: "Kauan",
-                          imagem: "Kauan.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FKauan.png?alt=media&token=962c13e1-085d-4772-806a-51ba3ba6a832",
                           profissao: "Programador Junior",
                         )),
                   ],
@@ -356,7 +356,7 @@ class _MyinformaticaState extends State<Myinformatica> {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 15.0),
                         child: InkWell(
-                          child: Image(image: AssetImage("git.png"))
+                          child: Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Fgit.png?alt=media&token=2f810242-7e65-4a31-9edf-26e04cb99833"))
                           ),
                       ),
                     ),

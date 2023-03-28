@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:core';
-import 'dart:html';
 import 'dart:typed_data';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -44,18 +43,24 @@ class _fotoDaNavBarState extends State<fotoDaNavBar> {
     return ClipRRect(
       borderRadius: BorderRadius.circular(100),
       child: url == null
-        ? Image.asset(
-            'User.png',
-          )
-        : Image.network(
-            url!,
-            errorBuilder: (BuildContext context, Object exception,
-                StackTrace? stackTrace) {
-              return Image.asset(
-                'User.png',
-              );
-            },
-          ),
+        ? CircleAvatar(
+          child: Image.network(
+              'https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FUser.png?alt=media&token=b74fc1ff-7938-415d-8c1a-be2c10dd6ef2',
+            ),
+        )
+        : CircleAvatar(
+          child: Image.network(
+              url!,
+              errorBuilder: (BuildContext context, Object exception,
+                  StackTrace? stackTrace) {
+                return CircleAvatar(
+                  child: Image.network(
+                    'https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FUser.png?alt=media&token=b74fc1ff-7938-415d-8c1a-be2c10dd6ef2',
+                  ),
+                );
+              },
+            ),
+        ),
     );
   }
 }

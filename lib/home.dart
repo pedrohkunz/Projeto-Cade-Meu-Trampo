@@ -29,354 +29,371 @@ class _MyHomeState extends State<MyHome> {
           backgroundColor: Color.fromARGB(255,16,17,21),
           drawer: MyDrawer(),
           appBar: PreferredSize(child: MyNavBar(), preferredSize: Size(55, 55)),
-          body: Center(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left:45.0, right: 55.0, top: 40, bottom: 25),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      child: Text("Categorias recomendadas",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20),),
-                    ),
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.only(left: 30, right: 30),
-                  height: 200,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      SizedBox(width: 15,),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Color.fromARGB(255, 22, 24, 30),
-                        ),
-                        width: 280,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(context, FadePageRoute(builder: (context)=> Myinformatica()));
-                              },
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                                child: Image(image: AssetImage("carinhadoti.jpg"),
-                                fit: BoxFit.cover,
-                                alignment: Alignment.topCenter,
-                                height: 120,
-                                width: 300
-                                ),
-                              ),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(context, FadePageRoute(builder: (context)=> Myinformatica()));
-                              },
-                              child: Padding(
-                                padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                                child: Container(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text("Informática", style: TextStyle(
-                                    color: Colors.white, fontSize: 18
-                                  ),),
-                                ),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left:20.0, right: 100.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Divider(
-                                  thickness: 1.5,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Text("Profissionais de T.I", style: TextStyle(
-                                  color: Color.fromARGB(255, 194, 194, 194),
-                                  fontSize: 15
-                                ),),
-                              ),
-                            )
-                            
-                          ],
-                        )
-                      ),
-
-                      SizedBox(width: 25,),
-                      
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Color.fromARGB(255, 22, 24, 30),
-                        ),
-                        width: 280,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            GestureDetector(
-                              onTap: (){
-                                Navigator.push(context, FadePageRoute(builder: (context)=> MyDesign()));
-                              },
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                                child: Image(image: AssetImage("design.jpg"),
-                                fit: BoxFit.cover,
-                                alignment: Alignment.topCenter,
-                                height: 120,
-                                width: 300
-                                ),
-                              ),
-                            ),
-                            GestureDetector(
-                              onTap: (){
-                                Navigator.push(context, FadePageRoute(builder: (context)=> MyDesign()));
-                              },
-                              child: Padding(
-                                padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                                child: Container(
-                                  alignment: Alignment.centerLeft,
-                                  child: Text("Design", style: TextStyle(
-                                    color: Colors.white, fontSize: 18
-                                  ),),
-                                ),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left:20.0, right: 100.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Divider(
-                                  thickness: 1.5,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Text("Profissionais em Design Gráfico", style: TextStyle(
-                                  color: Color.fromARGB(255, 194, 194, 194),
-                                  fontSize: 15
-                                ),),
-                              ),
-                            )
-                            
-                          ],
-                        )
-                      ),
-
-
-                      SizedBox(width: 25,),
-                     
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Color.fromARGB(255, 22, 24, 30),
-                        ),
-                        width: 280,
-                        height: 200,
-                        child: Column(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                              child: Image(image: AssetImage("obras.jpg"),
-                              fit: BoxFit.cover,
-                              alignment: Alignment.topCenter,
-                              height: 120,
-                              width: 300
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Text("Obras & Reformas", style: TextStyle(
-                                  color: Colors.white, fontSize: 18
-                                ),),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left:20.0, right: 100.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Divider(
-                                  thickness: 1.5,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Text("Profissionais em Obras e Reformas", style: TextStyle(
-                                  color: Color.fromARGB(255, 194, 194, 194),
-                                  fontSize: 15
-                                ),),
-                              ),
-                            )
-                            
-                          ],
-                        )
-                      ),
-
-
-                      SizedBox(width: 25,),
-
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Color.fromARGB(255, 22, 24, 30),
-                        ),
-                        width: 280,
-                        height: 200,
-                        child: Column(
-                          children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-                                child: Image(
-                                  image: AssetImage("professor.png"),
-                                fit: BoxFit.cover,
-                                alignment: Alignment.topCenter,
-                                height: 120,
-                                width: 300,
-                            
-                                ),
-                              ),
-                            
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8.0, left: 20.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Text("Educação & Ensino", style: TextStyle(
-                                  color: Colors.white, fontSize: 18,
-                                ),
-                                ),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left:20.0, right: 100.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Divider(
-                                  thickness: 1.5,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20.0),
-                              child: Container(
-                                alignment: Alignment.centerLeft,
-                                child: Text("Profissionais da educação", style: TextStyle(
-                                  color: Color.fromARGB(255, 194, 194, 194),
-                                  fontSize: 15
-                                ),),
-                              ),
-                            )
-                            
-                          ],
-                        )
-                      ),
-                    ],
-                  ),
-                ),
-
-
-                Padding(
-                  padding: const EdgeInsets.only(left:45.0, right: 55.0, top: 40, bottom: 25),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      child: SingleChildScrollView(
-                        child: Text("Profissionais Bem Avaliados",
+          body: SingleChildScrollView(
+            child: Center(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left:45.0, right: 55.0, top: 40, bottom: 25),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Container(
+                        child: Text("Categorias recomendadas",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20),),
                       ),
                     ),
                   ),
-                ),
-
-                Container(
-                  padding: EdgeInsets.only(left: 27, top: 10, right: 37.0),
-                  height: 200,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      GestureDetector(
-                        onTap: (){
-                          Navigator.push(context, SlidePageRoute(page: MyRodrigo()));
-                        },
-                        child: Container(
+                  Container(
+                    padding: EdgeInsets.only(left: 30, right: 30),
+                    height: 200,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        SizedBox(width: 15,),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Color.fromARGB(255, 22, 24, 30),
+                          ),
+                          width: 280,
                           height: 200,
-                          child: MyRecomendados(nome: "Rodrigo", imagem: "RodrigoLima.png", profissao: "Programador",)
+                          child: Column(
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(context, FadePageRoute(builder: (context)=> Myinformatica()));
+                                },
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+                                  child: Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Fcarinhadoti.jpg?alt=media&token=324f3fa5-5f5f-46a9-af20-cc19530e6d58"),
+                                  fit: BoxFit.cover,
+                                  alignment: Alignment.topCenter,
+                                  height: 120,
+                                  width: 300
+                                  ),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(context, FadePageRoute(builder: (context)=> Myinformatica()));
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                                  child: Container(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text("Informática", style: TextStyle(
+                                      color: Colors.white, fontSize: 18
+                                    ),),
+                                  ),
+                                ),
+                              ),
+          
+                              Padding(
+                                padding: const EdgeInsets.only(left:20.0, right: 100.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Divider(
+                                    thickness: 1.5,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+          
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text("Profissionais de T.I", style: TextStyle(
+                                    color: Color.fromARGB(255, 194, 194, 194),
+                                    fontSize: 15
+                                  ),),
+                                ),
+                              )
+                              
+                            ],
+                          )
                         ),
-                      ),
-                      
-                      SizedBox(width: 28,),
-
-                      GestureDetector(
-                        onTap: (){
-                          Navigator.push(context, SlidePageRoute(page: MyFernando()));
-                        },
-                        child: Container(
+          
+                        SizedBox(width: 25,),
+                        
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Color.fromARGB(255, 22, 24, 30),
+                          ),
+                          width: 280,
                           height: 200,
-                          child: MyRecomendados(nome: "Fernando ", imagem: "FernandoMoraes.png", profissao: "Designer",)
+                          child: Column(
+                            children: [
+                              GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context, FadePageRoute(builder: (context)=> MyDesign()));
+                                },
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+                                  child: Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Fdesign.jpg?alt=media&token=d290af6a-606d-4998-9ff0-2d93996b4ccf"),
+                                  fit: BoxFit.cover,
+                                  alignment: Alignment.topCenter,
+                                  height: 120,
+                                  width: 300
+                                  ),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context, FadePageRoute(builder: (context)=> MyDesign()));
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                                  child: Container(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text("Design", style: TextStyle(
+                                      color: Colors.white, fontSize: 18
+                                    ),),
+                                  ),
+                                ),
+                              ),
+          
+                              Padding(
+                                padding: const EdgeInsets.only(left:20.0, right: 100.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Divider(
+                                    thickness: 1.5,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+          
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text("Profissionais em Design Gráfico", style: TextStyle(
+                                    color: Color.fromARGB(255, 194, 194, 194),
+                                    fontSize: 15
+                                  ),),
+                                ),
+                              )
+                              
+                            ],
+                          )
                         ),
-                      ),
-
-                      SizedBox(width: 28,),
-
-                      GestureDetector(
-                        onTap: (){
-                          Navigator.push(context, SlidePageRoute(page: MyJoana()));
-                        },
-                        child: Container(
+          
+          
+                        SizedBox(width: 25,),
+                       
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Color.fromARGB(255, 22, 24, 30),
+                          ),
+                          width: 280,
                           height: 200,
-                          child: MyRecomendados(nome: "Joana", imagem: "JoanaMachado.png", profissao: "Designer",)
+                          child: Column(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+                                child: Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Fobras.jpg?alt=media&token=dc7022ad-001e-4260-b5cf-45dea2ed4605"),
+                                fit: BoxFit.cover,
+                                alignment: Alignment.topCenter,
+                                height: 120,
+                                width: 300
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text("Obras & Reformas", style: TextStyle(
+                                    color: Colors.white, fontSize: 18
+                                  ),),
+                                ),
+                              ),
+          
+                              Padding(
+                                padding: const EdgeInsets.only(left:20.0, right: 100.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Divider(
+                                    thickness: 1.5,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+          
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text("Profissionais em Obras e Reformas", style: TextStyle(
+                                    color: Color.fromARGB(255, 194, 194, 194),
+                                    fontSize: 15
+                                  ),),
+                                ),
+                              )
+                              
+                            ],
+                          )
                         ),
-                      ),
-
-                      SizedBox(width: 28,),
-
-                      Container(
-                        height: 200,
-                        child: MyRecomendados(nome: "Joyce", imagem: "Joyce.png", profissao: "Arquiteta",)
-                      ),
-
-                      SizedBox(width: 28,),
-
-                      Container(
-                        height: 200,
-                        child: MyRecomendados(nome: "Pedro", imagem: "Kauan.png", profissao: "Estudante",)
-                      ),
-
-                      SizedBox(width: 28,),
-                    ],
+          
+          
+                        SizedBox(width: 25,),
+          
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Color.fromARGB(255, 22, 24, 30),
+                          ),
+                          width: 280,
+                          height: 200,
+                          child: Column(
+                            children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+                                  child: Image(
+                                    image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Fprofessor.png?alt=media&token=0e082d19-d97c-49d0-ac1e-b28c2d979b11"),
+                                  fit: BoxFit.cover,
+                                  alignment: Alignment.topCenter,
+                                  height: 120,
+                                  width: 300,
+                              
+                                  ),
+                                ),
+                              
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text("Educação & Ensino", style: TextStyle(
+                                    color: Colors.white, fontSize: 18,
+                                  ),
+                                  ),
+                                ),
+                              ),
+          
+                              Padding(
+                                padding: const EdgeInsets.only(left:20.0, right: 100.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Divider(
+                                    thickness: 1.5,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+          
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20.0),
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text("Profissionais da educação", style: TextStyle(
+                                    color: Color.fromARGB(255, 194, 194, 194),
+                                    fontSize: 15
+                                  ),),
+                                ),
+                              )
+                              
+                            ],
+                          )
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+          
+          
+                  Padding(
+                    padding: const EdgeInsets.only(left:45.0, right: 55.0, top: 40, bottom: 25),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Container(
+                        child: SingleChildScrollView(
+                          child: Text("Profissionais Bem Avaliados",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20),),
+                        ),
+                      ),
+                    ),
+                  ),
+          
+                  Container(
+                    padding: EdgeInsets.only(left: 27, top: 10, right: 37.0),
+                    height: 200,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, SlidePageRoute(page: MyRodrigo()));
+                          },
+                          child: Container(
+                            height: 200,
+                            child: MyRecomendados(
+                              nome: "Rodrigo",
+                              imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FRodrigoLima.png?alt=media&token=3a1e3c47-f1e5-4c14-acf8-8cd997a91a19",
+                              profissao: "Programador",)
+                          ),
+                        ),
+                        
+                        SizedBox(width: 28,),
+          
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, SlidePageRoute(page: MyFernando()));
+                          },
+                          child: Container(
+                            height: 200,
+                            child: MyRecomendados(
+                              nome: "Fernando ",
+                              imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FFernandoMoraes.png?alt=media&token=d456c8b8-b233-4f64-8dcd-cd64b3d5b908",
+                              profissao: "Designer",)
+                          ),
+                        ),
+          
+                        SizedBox(width: 28,),
+          
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, SlidePageRoute(page: MyJoana()));
+                          },
+                          child: Container(
+                            height: 200,
+                            child: MyRecomendados(
+                              nome: "Joana",
+                              imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoanaMachado.png?alt=media&token=4856ddee-6b3f-4c51-8b2e-29bcf9561e4b",
+                              profissao: "Designer",)
+                          ),
+                        ),
+          
+                        SizedBox(width: 28,),
+          
+                        Container(
+                          height: 200,
+                          child: MyRecomendados(
+                            nome: "Joyce",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoyce.png?alt=media&token=a0482283-1aeb-4513-950b-c1ad28fba840", 
+                            profissao: "Arquiteta",)
+                        ),
+          
+                        SizedBox(width: 28,),
+          
+                        Container(
+                          height: 200,
+                          child: MyRecomendados(
+                            nome: "Pedro", 
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FKauan.png?alt=media&token=962c13e1-085d-4772-806a-51ba3ba6a832", 
+                            profissao: "Estudante",)
+                        ),
+          
+                        SizedBox(width: 28,),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           bottomNavigationBar: BottomAppBar(
@@ -402,7 +419,7 @@ class _MyHomeState extends State<MyHome> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 15.0),
-                  child: Image(image: AssetImage("git.png")),
+                  child: Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Fgit.png?alt=media&token=2f810242-7e65-4a31-9edf-26e04cb99833")),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 40.0),

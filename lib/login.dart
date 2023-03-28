@@ -142,15 +142,15 @@ class _MyLoginState extends State<MyLogin> {
                   children: [
                      Image(
                       image: 
-                        AssetImage("facebook.png"),
+                        NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Ffacebook.png?alt=media&token=f019e100-93de-4690-9c28-4c873c12391b"),
                           height: 50, 
                           width: 50
                       ),
-                     Image(image: AssetImage("instagram.png"),
+                     Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Finstagram.png?alt=media&token=143d00c2-0d42-4af0-bf23-a8df29d84464"),
                           height: 50, 
                           width: 50
                       ),
-                     Image(image: AssetImage("linkedin.png"),
+                     Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Flinkedin.png?alt=media&token=68b5cae2-ca41-4b6e-a7f1-6fe1f84ec785"),
                          height: 50, 
                          width: 50
                       ),

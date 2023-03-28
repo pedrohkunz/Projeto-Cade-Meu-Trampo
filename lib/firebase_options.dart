@@ -49,8 +49,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1052326365292',
     projectId: 'cademeutrampo',
     authDomain: 'cademeutrampo.firebaseapp.com',
+    databaseURL: 'https://cademeutrampo.firebaseio.com' ,
     storageBucket: 'cademeutrampo.appspot.com',
-    databaseURL: 'https://cademeutrampo.firebaseio.com' 
   );
 
   static const FirebaseOptions android = FirebaseOptions(

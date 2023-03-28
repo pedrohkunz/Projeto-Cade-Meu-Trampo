@@ -6,9 +6,7 @@ import 'package:projetocademeutrampo/editarperfil.dart';
 import 'package:projetocademeutrampo/home.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
-import 'package:projetocademeutrampo/model/botaoTesteImagem.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-
 
 class MyRodrigo extends StatefulWidget {
   const MyRodrigo({super.key});
@@ -21,7 +19,7 @@ class _MyRodrigoState extends State<MyRodrigo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 22,24,30),
+      backgroundColor: Color.fromARGB(255, 22, 24, 30),
       drawer: MyDrawer(),
       appBar: PreferredSize(child: MyNavBar(), preferredSize: Size(55, 55)),
       body: SingleChildScrollView(
@@ -31,14 +29,18 @@ class _MyRodrigoState extends State<MyRodrigo> {
               child: Column(
                 children: [
                   Container(
-                    color: Color.fromARGB(255,16,17,21),
+                    color: Color.fromARGB(255, 16, 17, 21),
                     child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(top:20.0, bottom: 10),
-                          child: Text("Perfil do Profissional", style: TextStyle(
-                            color: Colors.white, fontSize: 35,
-                          ),),
+                          padding: const EdgeInsets.only(top: 20.0, bottom: 10),
+                          child: Text(
+                            "Perfil do Profissional",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 35,
+                            ),
+                          ),
                         ),
                         Container(
                           margin: EdgeInsets.only(left: 50, right: 50),
@@ -46,77 +48,91 @@ class _MyRodrigoState extends State<MyRodrigo> {
                             color: Color.fromARGB(255, 255, 255, 255),
                           ),
                         ),
-                        
-                               Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Image.asset(
-                              "RodrigoLima.png",
+                        Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Image.network(
+                              "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FRodrigoLima.png?alt=media&token=3a1e3c47-f1e5-4c14-acf8-8cd997a91a19",
                               width: 200,
                               height: 200,
-                            )
+                            )),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 1.0),
+                          child: Text(
+                            "Rodrigo Lima",
+                            style: TextStyle(color: Colors.white, fontSize: 26),
+                          ),
                         ),
-                               Padding(
-                           padding: const EdgeInsets.only(bottom:1.0),
-                           child: Text("Rodrigo Lima", style: TextStyle(
-                            color: Colors.white, fontSize: 26
-                           ),),
-                         ),
-                            
-                         SizedBox(height: 1.5,),
-                            
-                         Text("Técnico de T.I", style: TextStyle(
-                          color: Color.fromARGB(255, 172, 171, 171), fontSize: 20
-                         ),
-                         ),
-      
-                         Padding(
-                           padding: const EdgeInsets.only(top: 25),
-                           child: Row(
+                        SizedBox(
+                          height: 1.5,
+                        ),
+                        Text(
+                          "Técnico de T.I",
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 172, 171, 171),
+                              fontSize: 20),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 25),
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               ElevatedButton(
-                                style: ButtonStyle(
-                                  shape: MaterialStatePropertyAll(
-                                    RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(40) )
+                                  style: ButtonStyle(
+                                    shape: MaterialStatePropertyAll(
+                                        RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(40))),
+                                    backgroundColor:
+                                        MaterialStatePropertyAll<Color>(
+                                            Color.fromARGB(255, 23, 51, 134)),
+                                    padding: MaterialStateProperty.all(
+                                      EdgeInsets.only(
+                                          top: 20,
+                                          bottom: 20,
+                                          left: 40,
+                                          right: 40),
+                                    ),
                                   ),
-                                  backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 23, 51, 134)),
-                                  padding: MaterialStateProperty.all(EdgeInsets.only(top:20, bottom: 20 ,left: 40, right: 40 ),
-                                  
-                                  ),
-                              ),
-                              onPressed: (){}, 
-                              child: Text("Seguir", style: TextStyle(color: Colors.white, fontSize: 18),) 
-                              ),
-                         
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Seguir",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 18),
+                                  )),
                               SizedBox(width: 30),
-                         
                               ElevatedButton(
-                                style: ButtonStyle(
-                                  shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                                      side:
-                                          BorderSide(color: Color.fromARGB(255, 23, 51, 134), width: 3),
-                                      borderRadius: BorderRadius.circular(40))),
-                                  backgroundColor:
-                                      MaterialStatePropertyAll<Color>(Color.fromARGB(255, 16, 17, 21)),
-                                  padding: MaterialStateProperty.all(
-                                    EdgeInsets.only(top: 20, bottom: 20, left: 40, right: 40),
+                                  style: ButtonStyle(
+                                    shape: MaterialStatePropertyAll(
+                                        RoundedRectangleBorder(
+                                            side: BorderSide(
+                                                color: Color.fromARGB(
+                                                    255, 23, 51, 134),
+                                                width: 3),
+                                            borderRadius:
+                                                BorderRadius.circular(40))),
+                                    backgroundColor:
+                                        MaterialStatePropertyAll<Color>(
+                                            Color.fromARGB(255, 16, 17, 21)),
+                                    padding: MaterialStateProperty.all(
+                                      EdgeInsets.only(
+                                          top: 20,
+                                          bottom: 20,
+                                          left: 40,
+                                          right: 40),
+                                    ),
                                   ),
-                                ),
-                                onPressed: (){},
-                                child: Text(
-                                  "Contatar",
-                                  style: TextStyle(color: Colors.white, fontSize: 18),
-                                )
-                              )
-                              
+                                  onPressed: () {},
+                                  child: Text(
+                                    "Contatar",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 18),
+                                  ))
                             ],
-                           ),
-                         ),
-      
-                         SizedBox(
+                          ),
+                        ),
+                        SizedBox(
                           height: 25,
-                         ),
+                        ),
                       ],
                     ),
                   ),
@@ -126,36 +142,56 @@ class _MyRodrigoState extends State<MyRodrigo> {
                       child: Column(
                         children: [
                           Container(
-                            alignment: AlignmentDirectional.topStart,
-                            child: const Text("Sobre", style: TextStyle(color: Colors.white, fontSize: 25), )
-                            ),
-                          SizedBox(height: 13,),
-                          Text("Olá, meu nome é Rodrigo Lima e sou um profissional de informática com ampla experiência em programação e assistência técnica. Tenho 33 anos e vivo na parte nordeste de Porto Alegre, onde me dedico a oferecer soluções em tecnologia para empresas e clientes individuais.", style: TextStyle(color: Colors.white, fontSize: 18),),
-                          SizedBox(height: 50,),
+                              alignment: AlignmentDirectional.topStart,
+                              child: const Text(
+                                "Sobre",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                          SizedBox(
+                            height: 13,
+                          ),
+                          Text(
+                            "Olá, meu nome é Rodrigo Lima e sou um profissional de informática com ampla experiência em programação e assistência técnica. Tenho 33 anos e vivo na parte nordeste de Porto Alegre, onde me dedico a oferecer soluções em tecnologia para empresas e clientes individuais.",
+                            style: TextStyle(color: Colors.white, fontSize: 18),
+                          ),
+                          SizedBox(
+                            height: 50,
+                          ),
                           Column(
                             children: [
-                              Text("Social Links", style: TextStyle(color: Colors.white, fontSize: 25),
+                              Text(
+                                "Social Links",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
                               ),
-                              SizedBox(height: 20,),
-                               Padding(
-                              padding: const EdgeInsets.only(top: 15, left: 35, right: 35),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Image(image: AssetImage("facebook.png"),
-                                      height: 50, 
-                                      width: 50
-                                    ),
-                                  Image(image: AssetImage("instagram.png"),
-                                      height: 50, 
-                                      width: 50
-                                    ),
-                                  Image(image: AssetImage("linkedin.png"),
-                                      height: 50, 
-                                      width: 50
-                                    ),
-                                ],
+                              SizedBox(
+                                height: 20,
                               ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    top: 15, left: 35, right: 35),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Image(
+                                        image: NetworkImage(
+                                            "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Ffacebook.png?alt=media&token=f019e100-93de-4690-9c28-4c873c12391b"),
+                                        height: 50,
+                                        width: 50),
+                                    Image(
+                                        image: NetworkImage(
+                                            "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Finstagram.png?alt=media&token=143d00c2-0d42-4af0-bf23-a8df29d84464"),
+                                        height: 50,
+                                        width: 50),
+                                    Image(
+                                        image: NetworkImage(
+                                            "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Flinkedin.png?alt=media&token=68b5cae2-ca41-4b6e-a7f1-6fe1f84ec785"),
+                                        height: 50,
+                                        width: 50),
+                                  ],
+                                ),
                               ),
                             ],
                           )
@@ -196,5 +232,3 @@ class SlidePageRoute extends PageRouteBuilder {
           },
         );
 }
-
-

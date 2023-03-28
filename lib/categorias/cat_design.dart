@@ -4,6 +4,9 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
 import 'package:projetocademeutrampo/model/recomendados.dart';
+import 'package:projetocademeutrampo/profiles/Fernando.dart';
+import 'package:projetocademeutrampo/profiles/Joana.dart';
+import 'package:projetocademeutrampo/profiles/Rodrigo.dart';
 
 class MyDesign extends StatefulWidget {
   const MyDesign({super.key});
@@ -25,7 +28,7 @@ class _MyDesignState extends State<MyDesign> {
             children: [
               Stack(
                 children: [
-                  Image.asset('design.jpg'),
+                  Image.network('https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Fdesign.jpg?alt=media&token=d290af6a-606d-4998-9ff0-2d93996b4ccf'),
                   Positioned(
                     top: 30,
                     left: 10,
@@ -127,13 +130,18 @@ class _MyDesignState extends State<MyDesign> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "Rodrigo Lima",
-                          imagem: "RodrigoLima.png",
-                          profissao: "Designer Gráfico",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyRodrigo()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                            nome: "Rodrigo Lima",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FRodrigoLima.png?alt=media&token=3a1e3c47-f1e5-4c14-acf8-8cd997a91a19",
+                            profissao: "Designer Gráfico",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
@@ -141,7 +149,7 @@ class _MyDesignState extends State<MyDesign> {
                         height: 200,
                         child: MyRecomendados(
                           nome: "Kauan",
-                          imagem: "Kauan.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FKauan.png?alt=media&token=962c13e1-085d-4772-806a-51ba3ba6a832",
                           profissao: "Designer Gráfico",
                         )),
                     SizedBox(
@@ -151,37 +159,47 @@ class _MyDesignState extends State<MyDesign> {
                         height: 200,
                         child: MyRecomendados(
                           nome: "Joyce",
-                          imagem: "Joyce.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoyce.png?alt=media&token=a0482283-1aeb-4513-950b-c1ad28fba840",
                           profissao: "Designer Gráfico",
                         )),
+                    SizedBox(
+                      width: 28,
+                    ),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyJoana()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                            nome: "Joana Machado",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoanaMachado.png?alt=media&token=4856ddee-6b3f-4c51-8b2e-29bcf9561e4b",
+                            profissao: "Designer Gráfico",
+                          )),
+                    ),
+                    SizedBox(
+                      width: 28,
+                    ),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyFernando()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                            nome: "Fernando Moraes",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FFernandoMoraes.png?alt=media&token=d456c8b8-b233-4f64-8dcd-cd64b3d5b908",
+                            profissao: "Designer Gráfico",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
                     Container(
                         height: 200,
                         child: MyRecomendados(
-                          nome: "Joana Machado",
-                          imagem: "JoanaMachado.png",
-                          profissao: "Designer Gráfico",
-                        )),
-                    SizedBox(
-                      width: 28,
-                    ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "Fernando Moraes",
-                          imagem: "FernandoMoraes.png",
-                          profissao: "Designer Gráfico",
-                        )),
-                    SizedBox(
-                      width: 28,
-                    ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "wesley",
-                          imagem: "wesley.png",
+                          nome: "Wesley",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FWesley.png?alt=media&token=265fb78b-be4f-4aec-9d9a-1a7c848b692f",
                           profissao: "Designer Gráfico",
                         )),
                   ],
@@ -235,19 +253,24 @@ class _MyDesignState extends State<MyDesign> {
                         height: 200,
                         child: MyRecomendados(
                           nome: "Wesley",
-                          imagem: "Wesley.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FWesley.png?alt=media&token=265fb78b-be4f-4aec-9d9a-1a7c848b692f",
                           profissao: "Designer de Interiores",
                         )),
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "Fernando Moraes",
-                          imagem: "FernandoMoraes.png",
-                          profissao: "Designer de Interiores",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyFernando()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                            nome: "Fernando Moraes",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FFernandoMoraes.png?alt=media&token=d456c8b8-b233-4f64-8dcd-cd64b3d5b908",
+                            profissao: "Designer de Interiores",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
@@ -255,29 +278,39 @@ class _MyDesignState extends State<MyDesign> {
                         height: 200,
                         child: MyRecomendados(
                           nome: "Kauan",
-                          imagem: "Kauan.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FKauan.png?alt=media&token=962c13e1-085d-4772-806a-51ba3ba6a832",
                           profissao: "Designer de Interiores",
                         )),
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "Joana Machado",
-                          imagem: "JoanaMachado.png",
-                          profissao: "Designer de Interiores",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyJoana()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                            nome: "Joana Machado",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoanaMachado.png?alt=media&token=4856ddee-6b3f-4c51-8b2e-29bcf9561e4b",
+                            profissao: "Designer de Interiores",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                          nome: "Rodrigo Lima",
-                          imagem: "RodrigoLima.png",
-                          profissao: "Designer de Interiores",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyRodrigo()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                            nome: "Rodrigo Lima",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FRodrigoLima.png?alt=media&token=3a1e3c47-f1e5-4c14-acf8-8cd997a91a19",
+                            profissao: "Designer de Interiores",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
@@ -285,7 +318,7 @@ class _MyDesignState extends State<MyDesign> {
                         height: 200,
                         child: MyRecomendados(
                           nome: "Joyce",
-                          imagem: "Joyce.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoyce.png?alt=media&token=a0482283-1aeb-4513-950b-c1ad28fba840",
                           profissao: "Designer de Interiores",
                         )),
                   ],
@@ -339,29 +372,39 @@ class _MyDesignState extends State<MyDesign> {
                         height: 200,
                         child: MyRecomendados(
                            nome: "Joyce",
-                          imagem: "Joyce.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoyce.png?alt=media&token=a0482283-1aeb-4513-950b-c1ad28fba840",
                           profissao: "Designer de Serviço",
                         )),
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                            nome: "Rodrigo Lima",
-                          imagem: "RodrigoLima.png",
-                          profissao: "Designer de Interiores",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyRodrigo()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                              nome: "Rodrigo Lima",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FRodrigoLima.png?alt=media&token=3a1e3c47-f1e5-4c14-acf8-8cd997a91a19",
+                            profissao: "Designer de Interiores",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                           nome: "Joana Machado",
-                          imagem: "JoanaMachado.png",
-                          profissao: "Designer de Serviço",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyJoana()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                             nome: "Joana Machado",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FJoanaMachado.png?alt=media&token=4856ddee-6b3f-4c51-8b2e-29bcf9561e4b",
+                            profissao: "Designer de Serviço",
+                          )),
+                    ),
                     SizedBox(
                       width: 28,
                     ),
@@ -369,7 +412,7 @@ class _MyDesignState extends State<MyDesign> {
                         height: 200,
                         child: MyRecomendados(
                         nome: "Kauan",
-                          imagem: "Kauan.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FKauan.png?alt=media&token=962c13e1-085d-4772-806a-51ba3ba6a832",
                           profissao: "Designer de Serviço",
                         )),
                     SizedBox(
@@ -379,19 +422,24 @@ class _MyDesignState extends State<MyDesign> {
                         height: 200,
                         child: MyRecomendados(
                           nome: "Wesley",
-                          imagem: "Wesley.png",
+                          imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FWesley.png?alt=media&token=265fb78b-be4f-4aec-9d9a-1a7c848b692f",
                           profissao: "Designer de Serviço",
                         )),
                     SizedBox(
                       width: 28,
                     ),
-                    Container(
-                        height: 200,
-                        child: MyRecomendados(
-                           nome: "Fernando Moraes",
-                          imagem: "FernandoMoraes.png",
-                          profissao: "Designer de Serviço",
-                        )),
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.push(context, SlidePageRoute(page: MyFernando()));
+                      },
+                      child: Container(
+                          height: 200,
+                          child: MyRecomendados(
+                             nome: "Fernando Moraes",
+                            imagem: "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FFernandoMoraes.png?alt=media&token=d456c8b8-b233-4f64-8dcd-cd64b3d5b908",
+                            profissao: "Designer de Serviço",
+                          )),
+                    ),
                   ],
                 ),
               ),
@@ -426,7 +474,7 @@ class _MyDesignState extends State<MyDesign> {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 15.0),
                         child: InkWell(
-                          child: Image(image: AssetImage("git.png"))
+                          child: Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Fgit.png?alt=media&token=2f810242-7e65-4a31-9edf-26e04cb99833"))
                           ),
                       ),
                     ),
@@ -448,4 +496,27 @@ class _MyDesignState extends State<MyDesign> {
       ),
     );
   }
+}
+class SlidePageRoute extends PageRouteBuilder {
+  final Widget page;
+
+  SlidePageRoute({required this.page})
+      : super(
+          pageBuilder: (BuildContext context, Animation<double> animation,
+              Animation<double> secondaryAnimation) {
+            return page;
+          },
+          transitionsBuilder: (BuildContext context,
+              Animation<double> animation,
+              Animation<double> secondaryAnimation,
+              Widget child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0.0, 1.0),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
 }

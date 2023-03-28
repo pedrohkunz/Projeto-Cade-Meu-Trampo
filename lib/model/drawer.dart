@@ -1,7 +1,8 @@
-import 'dart:js';
+import 'dart:convert';
 import 'dart:math';
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -12,12 +13,47 @@ import 'package:projetocademeutrampo/model/fotoDoDrawer.dart';
 import 'package:projetocademeutrampo/perfil.dart';
 import 'package:projetocademeutrampo/cadastropage.dart';
 
-class MyDrawer extends StatelessWidget {
+class MyDrawer extends StatefulWidget {
+  @override
+  State<MyDrawer> createState() => _MyDrawerState();
+}
 
 final _firebaseAuth = FirebaseAuth.instance;
 
+class _MyDrawerState extends State<MyDrawer> {
 
-MyDrawer({super.key});
+  String? _email;
+  String? _fileContent;
+  String? _fileContent3;
+
+  @override
+  void initState() {
+    super.initState();
+    _getCurrentUserEmail();
+  }
+
+  Future<void> _getCurrentUserEmail() async {
+    final user = FirebaseAuth.instance.currentUser!;
+    setState(() {
+      _email = user.email!;
+    });
+    var _textoPath = _email! + "Texto";
+    final ref = FirebaseStorage.instance.ref('texts/$_textoPath.txt');
+    try {
+      final content = await ref.getData();
+      final decodedContent =
+          utf8.decode(content != null ? content.toList() : []);
+
+      setState(() {
+        _fileContent = decodedContent.split('\n')[0];
+        _fileContent3 = decodedContent.split('\n')[2];
+      });
+    } catch (e) {
+      setState(() {
+        _fileContent = 'Usuário';
+      });
+    }
+  }
 
 @override
 Widget build(BuildContext context) {
@@ -36,15 +72,14 @@ Widget build(BuildContext context) {
                         padding: const EdgeInsets.only(left:10.0),
                         child: Column(
                           children: [
-                            Text("Usuário", style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white
-                            ),),
+                            Text(
+                            _fileContent ?? '',
+                            style: TextStyle(color: Colors.white, fontSize: 18),
+                          ),
                             
-                            Text("Profissão", style: TextStyle(
-                              fontSize: 15,
-                              color: Color.fromARGB(255, 155, 155, 155)
-                            ),),
+                            _fileContent3 != null && _fileContent3!.isNotEmpty
+                          ? Text(_fileContent3!, style: TextStyle(color: Color.fromARGB(255, 155, 155, 155), fontSize: 15))
+                          : Text('Usuário', style: TextStyle(color: Color.fromARGB(255, 155, 155, 155), fontSize: 15)),
                           ],
                         ),
                       )
@@ -167,7 +202,7 @@ Widget build(BuildContext context) {
                   size: 35,
                   ),
                   onPressed: (){
-                    sair();
+                    sair(context);
                   }, 
                   label: Padding(
                     padding: const EdgeInsets.only(right: 128),
@@ -179,7 +214,7 @@ Widget build(BuildContext context) {
 
                   Padding(
                     padding: const EdgeInsets.only(top:15.0),
-                    child: Center(child: Text("Versão Alpha 1.2", style: TextStyle(
+                    child: Center(child: Text("Versão Beta 1.8.5", style: TextStyle(
                         color: Color.fromARGB(255, 219, 219, 219)),
                       )),
                   )
@@ -190,15 +225,11 @@ Widget build(BuildContext context) {
         );
       }
 
-      sair() async{
-        await _firebaseAuth.signOut().then(
-          (user) => Navigator.pushReplacement(
-            context as BuildContext, 
-            MaterialPageRoute(
-              builder: (context)=> ChecagemPage(),
-              ),
-            ),
+      sair(BuildContext context) async {
+        await _firebaseAuth.signOut();
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => ChecagemPage()),
         );
+      }
 }
-
-} 

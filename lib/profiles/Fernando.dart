@@ -6,7 +6,6 @@ import 'package:projetocademeutrampo/editarperfil.dart';
 import 'package:projetocademeutrampo/home.dart';
 import 'package:projetocademeutrampo/model/appbar.dart';
 import 'package:projetocademeutrampo/model/drawer.dart';
-import 'package:projetocademeutrampo/model/botaoTesteImagem.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
 
@@ -49,8 +48,8 @@ class _MyFernandoState extends State<MyFernando> {
                         
                                Padding(
                           padding: const EdgeInsets.all(15.0),
-                          child: Image.asset(
-                              "FernandoMoraes.png",
+                          child: Image.network(
+                              "https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2FFernandoMoraes.png?alt=media&token=d456c8b8-b233-4f64-8dcd-cd64b3d5b908",
                               width: 200,
                               height: 200,
                             )
@@ -142,15 +141,15 @@ class _MyFernandoState extends State<MyFernando> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Image(image: AssetImage("facebook.png"),
+                                  Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Ffacebook.png?alt=media&token=f019e100-93de-4690-9c28-4c873c12391b"),
                                       height: 50, 
                                       width: 50
                                     ),
-                                  Image(image: AssetImage("instagram.png"),
+                                  Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Finstagram.png?alt=media&token=143d00c2-0d42-4af0-bf23-a8df29d84464"),
                                       height: 50, 
                                       width: 50
                                     ),
-                                  Image(image: AssetImage("linkedin.png"),
+                                  Image(image: NetworkImage("https://firebasestorage.googleapis.com/v0/b/cademeutrampo.appspot.com/o/assets%2Flinkedin.png?alt=media&token=68b5cae2-ca41-4b6e-a7f1-6fe1f84ec785"),
                                       height: 50, 
                                       width: 50
                                     ),

@@ -12,7 +12,6 @@ import 'package:projetocademeutrampo/profiles/Fernando.dart';
 import 'package:projetocademeutrampo/profiles/Joana.dart';
 import 'package:projetocademeutrampo/profiles/Rodrigo.dart';
 import 'login.dart';
-import 'dart:js';
 
 void main() async{ 
   
